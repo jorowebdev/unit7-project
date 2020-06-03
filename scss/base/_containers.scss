@@ -1,0 +1,57 @@
+/* ============================================= */
+/*              Container Imports                */
+/* ============================================= */
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.header {
+  grid-column: 1 / -1;
+//  grid-row: 1 / 2;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border: solid 2px red;
+}
+
+.main {
+  grid-column: 1 / -1;
+  grid-row: 2 / -2;
+}
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: -1 / -2;
+  border: solid 2px blue;
+}
+
+// Header Styles
+
+.header--menu-button {
+  position: absolute;
+  top: 24.44px;
+  left: 17px;
+}
+
+.header--title {
+  text-align: center;
+}
+
+// Navigation Styles
+
+.nav {
+  background-color: red;
+  transition: .5s;
+}
