@@ -346,6 +346,52 @@ template {
   display: none;
 }
 
+.body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.header {
+  grid-column: 1/-1;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border: solid 2px red;
+}
+
+.header--menu-button {
+  position: absolute;
+  top: 24.44px;
+  left: 17px;
+}
+
+.header--title {
+  text-align: center;
+}
+
+.main {
+  grid-column: 1/-1;
+  grid-row: 2/-2;
+}
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: red;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.footer {
+  grid-column: 1/-1;
+  grid-row: -1/-2;
+  border: solid 2px blue;
+}
+
 /* ============================================= */
 /*              Component Imports                */
 /* ============================================= */
