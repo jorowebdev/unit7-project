@@ -349,18 +349,28 @@ template {
 /* ============================================= */
 /*              Container Imports                */
 /* ============================================= */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 .body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: 70px 1fr 50px;
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column: 1/-1;
   position: sticky;
   top: 0;
   background-color: white;
-  border: solid 2px red;
 }
 
 .main {
@@ -383,18 +393,18 @@ template {
   border: solid 2px blue;
 }
 
+.header {
+  background: #7476bf;
+}
+
 .header--menu-button {
   position: absolute;
-  top: 24.44px;
+  top: 23px;
   left: 17px;
 }
 
-.header--title {
-  text-align: center;
-}
-
 .nav {
-  background-color: red;
+  background-color: #4d4c72;
   transition: 0.5s;
 }
 
