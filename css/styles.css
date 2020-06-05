@@ -431,11 +431,38 @@ a {
 }
 
 .nav {
+  display: flex;
+  flex-direction: column;
   background-color: #4d4c72;
+  color: white;
   transition: 0.5s;
 }
 
+.nav--close-button {
+  align-self: flex-end;
+  padding-top: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.nav--ul {
+  list-style: none;
+  margin-top: 13px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.nav--svg-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 24px;
+}
+
 .dashboard {
+  transition: 0.5s;
+}
+
+.footer {
   transition: 0.5s;
 }
 
