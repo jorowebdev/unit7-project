@@ -63,10 +63,22 @@ a {
   left: 17px;
 }
 
+.header--notification-button {
+  position: absolute;
+  top: 23px;
+  right: 55px;
+  width: 24px;
+  height: 24px;
+}
+
 
 // Navigation Styles
 
 .nav {
   background-color: #4d4c72;
+  transition: .5s;
+}
+
+.dashboard {
   transition: .5s;
 }
