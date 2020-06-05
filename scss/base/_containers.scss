@@ -66,16 +66,25 @@ a {
 
 .header--notification-button {
   position: absolute;
-  top: 23px;
-  right: 55px;
-  width: 24px;
-  height: 24px;
+  top: 26.5px;
+  right: 50px;
+  width: 18px;
+  height: 18px;
 }
 
 .header--notification-button-path {
   fill: white;
   stroke: white;
   stroke-width: .5;
+}
+
+.header--member-profile {
+  position: absolute;
+  top: 23px;
+  right: 17px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
 
 // Navigation Styles

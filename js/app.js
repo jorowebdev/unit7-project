@@ -4,8 +4,8 @@ const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 
 menuButton.addEventListener('click', () => {
-  navMenu.style.width = '72px';
-  dashboardSection.style.marginLeft = '72px';
+  navMenu.style.width = '62px';
+  dashboardSection.style.marginLeft = '62px';
 });
 
 navCloseButton.addEventListener('click', () => {
