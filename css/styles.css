@@ -395,6 +395,7 @@ a {
 
 .header {
   background: #7476bf;
+  color: white;
 }
 
 .header--menu-button {
@@ -411,6 +412,12 @@ a {
   height: 24px;
 }
 
+.header--notification-button-path {
+  fill: white;
+  stroke: white;
+  stroke-width: 0.5;
+}
+
 .nav {
   background-color: #4d4c72;
   transition: 0.5s;
@@ -418,6 +425,13 @@ a {
 
 .dashboard {
   transition: 0.5s;
+}
+
+/* ============================================= */
+/*              Typography Imports               */
+/* ============================================= */
+* {
+  font-family: "Muli", sans-serif;
 }
 
 /* ============================================= */

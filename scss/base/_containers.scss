@@ -55,6 +55,7 @@ a {
 
 .header {
   background: #7476bf;
+  color: white;
 }
 
 .header--menu-button {
@@ -71,6 +72,11 @@ a {
   height: 24px;
 }
 
+.header--notification-button-path {
+  fill: white;
+  stroke: white;
+  stroke-width: .5;
+}
 
 // Navigation Styles
 
