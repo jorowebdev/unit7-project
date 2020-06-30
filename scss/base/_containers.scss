@@ -16,22 +16,33 @@ a {
 
 .body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 1fr 50px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
 .header {
+  // Grid position
+  grid-area: header;
+  // Flex styling
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 1 / -1;
+  // Other
   position: sticky;
   top: 0;
 }
 
 .main {
-  grid-column: 1 / -1;
-  grid-row: 2 / -2;
+  // Grid position
+  grid-area: main;
+}
+
+.dashboard {
+  transition: .5s;
 }
 
 .nav {
@@ -44,8 +55,9 @@ a {
 }
 
 .footer {
-  grid-column: 1 / -1;
-  grid-row: -1 / -2;
+  // Grid position
+  grid-area: footer;
+  // Other
   border: solid 2px blue;
 }
 
@@ -84,6 +96,9 @@ a {
   height: 24px;
   border-radius: 50%;
 }
+
+// Main styles
+
 
 // Navigation Styles
 

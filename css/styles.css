@@ -362,22 +362,26 @@ a {
 
 .body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 1fr 50px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "main" "footer";
 }
 
 .header {
+  grid-area: header;
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 1/-1;
   position: sticky;
   top: 0;
 }
 
 .main {
-  grid-column: 1/-1;
-  grid-row: 2/-2;
+  grid-area: main;
+}
+
+.dashboard {
+  transition: 0.5s;
 }
 
 .nav {
@@ -390,8 +394,7 @@ a {
 }
 
 .footer {
-  grid-column: 1/-1;
-  grid-row: -1/-2;
+  grid-area: footer;
   border: solid 2px blue;
 }
 
