@@ -70,6 +70,9 @@ a {
   // Grid position
   grid-area: footer;
   border: solid 2px blue;
+  @include mq($break-m) {
+    margin-left: 0 !important;
+  }
 }
 
 // Header Styles
