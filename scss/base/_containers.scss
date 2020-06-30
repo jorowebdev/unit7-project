@@ -25,10 +25,8 @@ a {
   justify-content: center;
   align-items: center;
   grid-column: 1 / -1;
-//  grid-row: 1 / 2;
   position: sticky;
   top: 0;
-  background-color: white;
 }
 
 .main {
@@ -115,20 +113,6 @@ a {
   width: 24px;
   height: 24px;
   margin-bottom: 24px;
-}
-
-// Dashboard Styles
-
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-//  grid-template-rows: repeat(2, 1fr);
-  transition: .5s;
-}
-
-.dashboard--title {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 }
 
 // Footer Styles

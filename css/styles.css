@@ -373,7 +373,6 @@ a {
   grid-column: 1/-1;
   position: sticky;
   top: 0;
-  background-color: white;
 }
 
 .main {
@@ -458,17 +457,6 @@ a {
   margin-bottom: 24px;
 }
 
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  transition: 0.5s;
-}
-
-.dashboard--title {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
 .footer {
   transition: 0.5s;
 }
@@ -480,79 +468,32 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 
-.dashboard--title {
-  font-size: 0.75em;
-  font-weight: 700;
-  text-align: center;
-  margin: auto;
-}
-
 /* ============================================= */
 /*              Component Imports                */
 /* ============================================= */
 /* ============================================= */
 /*              Settings Imports                 */
 /* ============================================= */
-.settings {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Searchbar Imports                */
 /* ============================================= */
-.search {
-  grid-column: 3/-1;
-  grid-row: 1/2;
-}
-
 /* ============================================= */
 /*              Members Imports                  */
 /* ============================================= */
-.members {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Message Imports             */
 /* ============================================= */
-.message {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Recent Activity Imports          */
 /* ============================================= */
-.recent-activity {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Social Stats Imports             */
 /* ============================================= */
-.social-stats {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Chart Imports                    */
 /* ============================================= */
-.traffic {
-  grid-column: 1/-1;
-}
-
-.daily-traffic {
-  grid-column: 1/-1;
-}
-
-.mobile-users {
-  grid-column: 1/-1;
-}
-
 /* ============================================= */
 /*              Notification Imports            */
 /* ============================================= */
-.notifications {
-  grid-column: 1/-1;
-}
 
 /*# sourceMappingURL=styles.css.map */
