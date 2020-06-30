@@ -403,6 +403,7 @@ a {
 }
 @media (min-width: 768px) {
   .nav {
+    overflow-x: visible;
     grid-area: nav;
     width: 62px;
   }
@@ -422,6 +423,11 @@ a {
   position: absolute;
   top: 23px;
   left: 17px;
+}
+@media (min-width: 768px) {
+  .header--menu-button {
+    visibility: hidden;
+  }
 }
 
 .header--notification-button {
@@ -460,6 +466,11 @@ a {
   padding-top: 5px;
   padding-right: 5px;
   font-size: 12px;
+}
+@media (min-width: 768px) {
+  .nav--close-button {
+    visibility: hidden;
+  }
 }
 
 .nav--ul {

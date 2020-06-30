@@ -12,6 +12,7 @@ menuButton.addEventListener('click', () => {
 
 navCloseButton.addEventListener('click', () => {
   navMenu.style.width = '0';
+  navMenu.style.width = '';
   dashboardSection.style.marginLeft = '0';
   footer.style.marginLeft = '0';
 });

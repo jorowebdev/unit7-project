@@ -25,9 +25,9 @@ a {
   @include mq($break-m) {
     grid-template-columns: 62px 1fr;
     grid-template-areas:
-      "header header"
-      "nav main"
-      "nav footer";
+    "header header"
+    "nav main"
+    "nav footer";
   }
 }
 
@@ -60,7 +60,7 @@ a {
   left: 0;
   overflow-x: hidden;
   @include mq($break-m) {
-    // Grid position
+    overflow-x: visible;
     grid-area: nav;
     width: 62px;
   }
@@ -83,6 +83,9 @@ a {
   position: absolute;
   top: 23px;
   left: 17px;
+  @include mq($break-m) {
+    visibility: hidden;
+  }
 }
 
 .header--notification-button {
@@ -126,6 +129,9 @@ a {
   padding-top: 5px;
   padding-right: 5px;
   font-size: 12px;
+  @include mq($break-m) {
+    visibility: hidden;
+  }
 }
 
 .nav--ul {
