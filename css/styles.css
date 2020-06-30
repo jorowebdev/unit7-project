@@ -8,6 +8,9 @@
 /*              Variables Imports                */
 /* ============================================= */
 /* ============================================= */
+/*              Mixin Imports                    */
+/* ============================================= */
+/* ============================================= */
 /*              Base Imports                     */
 /* ============================================= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -366,6 +369,12 @@ a {
   grid-template-rows: auto;
   grid-template-areas: "header" "main" "footer";
 }
+@media (min-width: 768px) {
+  .body {
+    grid-template-columns: 62px 1fr;
+    grid-template-areas: "header header" "nav main" "nav footer";
+  }
+}
 
 .header {
   grid-area: header;
@@ -391,6 +400,12 @@ a {
   z-index: 1;
   left: 0;
   overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  .nav {
+    grid-area: nav;
+    width: 62px;
+  }
 }
 
 .footer {

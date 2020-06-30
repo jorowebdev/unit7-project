@@ -22,6 +22,13 @@ a {
     "header"
     "main"
     "footer";
+  @include mq($break-m) {
+    grid-template-columns: 62px 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "nav footer";
+  }
 }
 
 .header {
@@ -52,12 +59,16 @@ a {
   z-index: 1;
   left: 0;
   overflow-x: hidden;
+  @include mq($break-m) {
+    // Grid position
+    grid-area: nav;
+    width: 62px;
+  }
 }
 
 .footer {
   // Grid position
   grid-area: footer;
-  // Other
   border: solid 2px blue;
 }
 
