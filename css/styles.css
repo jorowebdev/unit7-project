@@ -508,6 +508,9 @@ a {
 /* ============================================= */
 /*              Dashboard Imports                */
 /* ============================================= */
+.dashboard {
+  padding-left: 20px;
+}
 @media (min-width: 768px) {
   .dashboard {
     display: grid;
@@ -520,6 +523,19 @@ a {
 .dashboard--search-row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  background-color: #fbfbfb;
+}
+
+.dashboard--title-container {
+  height: 100%;
+  background: white;
+}
+
+.dashboard--title {
+  font-weight: normal;
+  margin-right: 20px;
+  border-right: 1px solid #f7f7f7;
 }
 
 @media (min-width: 768px) {
@@ -547,6 +563,54 @@ a {
 /* ============================================= */
 /*              Searchbar Imports                */
 /* ============================================= */
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  min-width: 0;
+  padding-right: 10px;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.search--input-container {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 80%;
+  min-width: 0;
+  max-width: 250px;
+  margin: 10px 0;
+}
+
+.search--input {
+  flex-basis: 100%;
+  min-width: 0;
+  padding: 5px 25px 5px 25px;
+}
+
+.search--search-icon-container {
+  position: absolute;
+}
+
+.search--search-icon {
+  position: relative;
+  font-size: 15px;
+  top: 12px;
+  left: 10px;
+}
+
+.search--cancel-icon-container {
+  position: absolute;
+}
+
+.search--cancel-icon {
+  position: relative;
+  font-size: 15px;
+  top: 12px;
+  left: -25px;
+}
+
 /* ============================================= */
 /*              Members Imports                  */
 /* ============================================= */

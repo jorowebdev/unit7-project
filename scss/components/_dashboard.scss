@@ -3,6 +3,7 @@
 /* ============================================= */
 
 .dashboard {
+  padding-left: 20px;
   @include mq($break-m) {
     display: grid;
     grid-template-columns: 50%;
@@ -12,7 +13,20 @@
 }
 
 .dashboard--search-row {
-  @include flexy($dir: row);
+  @include flexy($dir: row, $just: space-between);
+  background-color: #fbfbfb;
+}
+
+.dashboard--title-container {
+  height: 100%;
+  background: white;
+}
+
+.dashboard--title {
+  font-weight: normal;
+  margin-right: 20px;
+  border-right: 1px solid #f7f7f7;
+
 }
 
 // Dashboard grid components

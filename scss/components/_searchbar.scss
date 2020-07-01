@@ -1,3 +1,49 @@
 /* ============================================= */
 /*              Searchbar Imports                */
 /* ============================================= */
+
+.search {
+  @include flexy($dir: row, $just: flex-end);
+  flex-basis: 100%;
+  min-width: 0;
+  padding-right: 10px;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.search--input-container {
+//  position: absolute;
+  @include flexy($dir: row);
+  flex-basis: 80%;
+  min-width: 0;
+  max-width: 250px;
+  margin: 10px 0;
+}
+
+.search--input {
+  flex-basis: 100%;
+  min-width: 0; // Allows text field to shrink down
+  padding: 5px 25px 5px 25px
+}
+
+.search--search-icon-container {
+  position: absolute;
+}
+
+.search--search-icon {
+  position: relative;
+  font-size: 15px;
+  top: 12px;
+  left: 10px;
+}
+
+.search--cancel-icon-container {
+  position: absolute;
+}
+
+.search--cancel-icon {
+  position: relative;
+  font-size: 15px;
+  top: 12px;
+  left: -25px;
+}
