@@ -3,7 +3,7 @@
 /* ============================================= */
 
 .dashboard {
-  padding-left: 20px;
+  padding-left: 10px;
   @include mq($break-m) {
     display: grid;
     grid-template-columns: 50%;
@@ -24,9 +24,7 @@
 
 .dashboard--title {
   font-weight: normal;
-  margin-right: 20px;
-  border-right: 1px solid #f7f7f7;
-
+  margin-right: 10px;
 }
 
 // Dashboard grid components
@@ -46,4 +44,15 @@
   .settings {
     grid-column: 2 / span 1;
   }
+}
+
+// Widget styles
+
+.widget {
+  margin-right: 10px;
+}
+
+.widget--title {
+  font-weight: 400;
+  margin: 20px 0;
 }

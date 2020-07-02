@@ -3,7 +3,26 @@
 /* ============================================= */
 
 // Traffic
+.traffic--header {
+  @include flexy($dir: row, $just: space-between);
+  align-items: center;
+}
 
+.traffic--nav {
+  @include flexy($dir: row, $just: center);
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.traffic--nav-link {
+  display: inline-block;
+  height: 20px;
+  font-size: .7rem;
+  border-radius: 16px;
+  padding: 4px 7px 0;
+  background-color: #80C98F;
+}
 
 // Daily Traffic
 

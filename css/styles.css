@@ -420,6 +420,7 @@ a {
 }
 
 .header {
+  z-index: 100;
   background: #7476bf;
   color: white;
 }
@@ -509,7 +510,7 @@ a {
 /*              Dashboard Imports                */
 /* ============================================= */
 .dashboard {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 @media (min-width: 768px) {
   .dashboard {
@@ -534,8 +535,7 @@ a {
 
 .dashboard--title {
   font-weight: normal;
-  margin-right: 20px;
-  border-right: 1px solid #f7f7f7;
+  margin-right: 10px;
 }
 
 @media (min-width: 768px) {
@@ -557,6 +557,15 @@ a {
     grid-column: 2/span 1;
   }
 }
+.widget {
+  margin-right: 10px;
+}
+
+.widget--title {
+  font-weight: 400;
+  margin: 20px 0;
+}
+
 /* ============================================= */
 /*              Settings Imports                 */
 /* ============================================= */
@@ -569,9 +578,8 @@ a {
   justify-content: flex-end;
   flex-basis: 100%;
   min-width: 0;
-  padding-right: 10px;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .search--input-container {
@@ -579,7 +587,7 @@ a {
   flex-direction: row;
   flex-basis: 80%;
   min-width: 0;
-  max-width: 250px;
+  max-width: 300px;
   margin: 10px 0;
 }
 
@@ -626,6 +634,31 @@ a {
 /* ============================================= */
 /*              Chart Imports                    */
 /* ============================================= */
+.traffic--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traffic--nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.traffic--nav-link {
+  display: inline-block;
+  height: 20px;
+  font-size: 0.7rem;
+  border-radius: 16px;
+  padding: 4px 7px 0;
+  background-color: #80C98F;
+}
+
 /* ============================================= */
 /*              Notification Imports            */
 /* ============================================= */

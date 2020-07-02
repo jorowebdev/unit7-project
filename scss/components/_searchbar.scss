@@ -6,9 +6,8 @@
   @include flexy($dir: row, $just: flex-end);
   flex-basis: 100%;
   min-width: 0;
-  padding-right: 10px;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .search--input-container {
@@ -16,7 +15,7 @@
   @include flexy($dir: row);
   flex-basis: 80%;
   min-width: 0;
-  max-width: 250px;
+  max-width: 300px;
   margin: 10px 0;
 }
 
