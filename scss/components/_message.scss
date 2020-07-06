@@ -1,3 +1,46 @@
 /* ============================================= */
 /*              Message Imports             */
 /* ============================================= */
+
+.widget--container-message {
+  @include flexy($dir: column);
+}
+
+.widget--container-message-input {
+  padding: .8em;
+  background-color: #fbfbfb;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.widget--container-message-textarea {
+  padding: .8em;
+  background-color: #fbfbfb;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  resize: none;
+}
+
+.widget--container-message-input::placeholder {
+  color: #dbdbdb;
+  font-weight: lighter;
+}
+
+.widget--container-message-textarea::placeholder {
+  color: #dbdbdb;
+  font-weight: lighter;
+}
+
+.widget--container-message-button {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: .8em 0;
+  background-color: #7476bf;
+  border-radius: 5px;
+  border: 1px solid #7476bf;
+  color: white;
+}
+
+.widget--container-message > :nth-child(1n+2) {
+  margin-top: 20px;
+}
