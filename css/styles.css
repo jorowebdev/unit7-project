@@ -518,6 +518,7 @@ a {
     grid-template-columns: 50%;
     grid-template-rows: auto;
     margin-left: 0 !important;
+    padding-left: 20px;
   }
 }
 
@@ -535,7 +536,7 @@ a {
 
 .dashboard--title {
   font-weight: normal;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 @media (min-width: 768px) {
@@ -558,11 +559,13 @@ a {
   }
 }
 .widget {
-  margin-right: 10px;
+  margin-right: 20px;
+  border: 1px solid green;
 }
 
 .widget--title {
   font-weight: 400;
+  text-transform: uppercase;
   margin: 20px 0;
 }
 
@@ -622,12 +625,85 @@ a {
 /* ============================================= */
 /*              Members Imports                  */
 /* ============================================= */
+.widget--container-members {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget--container-member-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.widget--container-member-card:nth-child(1n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+
+.widget--container-member-img {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 0;
+}
+
+.widget--container-member-card-contact {
+  flex-grow: 1;
+}
+
+.widget--container-member-card-name {
+  margin: 0;
+}
+
+.widget--container-member-card-email {
+  font-weight: lighter;
+  font-size: 0.7em;
+}
+
+.widget--container-member-card-date {
+  font-weight: lighter;
+  text-align: right;
+}
+
 /* ============================================= */
 /*              Message Imports             */
 /* ============================================= */
 /* ============================================= */
 /*              Recent Activity Imports          */
 /* ============================================= */
+.widget--container-activity {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget--container-activity-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.widget--container-activity-card:nth-child(1n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+
+.widget--container-activity-info {
+  flex-grow: 1;
+}
+
+.widget--container-activity-description {
+  margin: 0;
+}
+
+.widget--container-activity-time-elapsed {
+  margin: 0;
+}
+
+.widget--container-activity-link {
+  font-size: 1.5em;
+}
+
 /* ============================================= */
 /*              Social Stats Imports             */
 /* ============================================= */

@@ -1,3 +1,32 @@
 /* ============================================= */
 /*              Recent Activity Imports          */
 /* ============================================= */
+
+.widget--container-activity {
+  @include flexy($dir: column);
+}
+
+.widget--container-activity-card {
+  @include flexy($dir: row);
+  align-items: center;
+  font-size: .9em;
+}
+.widget--container-activity-card:nth-child(1n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+
+.widget--container-activity-info {
+  flex-grow: 1;
+}
+
+.widget--container-activity-description {
+  margin: 0;
+}
+
+.widget--container-activity-time-elapsed {
+  margin: 0;
+}
+
+.widget--container-activity-link {
+  font-size: 1.5em;
+}

@@ -1,3 +1,42 @@
 /* ============================================= */
 /*              Members Imports                  */
 /* ============================================= */
+
+.widget--container-members {
+  @include flexy($dir: column);
+}
+
+.widget--container-member-card {
+  @include flexy($dir: row);
+  align-items: center;
+  font-size: .9em;
+}
+
+.widget--container-member-card:nth-child(1n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+
+.widget--container-member-img {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 0;
+}
+
+.widget--container-member-card-contact {
+  flex-grow: 1;
+}
+
+.widget--container-member-card-name {
+  margin: 0;
+}
+
+.widget--container-member-card-email {
+  font-weight: lighter;
+  font-size: .7em;
+}
+
+.widget--container-member-card-date {
+  font-weight: lighter;
+  text-align: right;
+}
