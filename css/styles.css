@@ -429,6 +429,7 @@ a {
   position: absolute;
   top: 23px;
   left: 17px;
+  cursor: default;
 }
 @media (min-width: 768px) {
   .header--menu-button {
@@ -472,6 +473,7 @@ a {
   padding-top: 5px;
   padding-right: 5px;
   font-size: 12px;
+  cursor: default;
 }
 @media (min-width: 768px) {
   .nav--close-button {
@@ -560,7 +562,6 @@ a {
 }
 .widget {
   margin-right: 20px;
-  border: 1px solid green;
 }
 
 .widget--title {
@@ -572,6 +573,60 @@ a {
 /* ============================================= */
 /*              Settings Imports                 */
 /* ============================================= */
+.widget--settings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-light {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.switch-material.switch-light input:checked ~ span {
+  background-color: #ddddef;
+}
+
+.switch-material.switch-light input:checked ~ span a {
+  background: #7476bf;
+}
+
+.widget--settings-toggle-box-title {
+  margin: 0;
+  flex-basis: 70%;
+}
+
+.widget--settings-dropdown {
+  padding: 0.8em;
+  background-color: #fbfbfb;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  color: #dbdbdb;
+  font-weight: lighter;
+}
+
+.widget--settings-container > * {
+  margin: 15px 0;
+}
+
+.widget--settings-button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.widget--settings-buttons {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.8em 0;
+  background-color: #7476bf;
+  border-radius: 5px;
+  border: 1px solid #7476bf;
+  color: white;
+  flex-basis: 45%;
+}
+
 /* ============================================= */
 /*              Searchbar Imports                */
 /* ============================================= */

@@ -1,3 +1,53 @@
 /* ============================================= */
 /*              Settings Imports                 */
 /* ============================================= */
+
+.widget--settings-container {
+  @include flexy($dir: column);
+}
+
+.switch-light {
+  @include flexy($dir: row);
+  align-items: center;
+}
+
+.switch-material.switch-light input:checked ~ span {
+  background-color: lighten(#7476bf, 30%);
+}
+
+.switch-material.switch-light input:checked ~ span a {
+  background: #7476bf;
+}
+
+.widget--settings-toggle-box-title {
+  margin: 0;
+  flex-basis: 70%;
+}
+
+.widget--settings-dropdown {
+  padding: .8em;
+  background-color: #fbfbfb;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  color: #dbdbdb;
+  font-weight: lighter;
+}
+
+.widget--settings-container > * {
+  margin: 15px 0;
+}
+
+.widget--settings-button-box {
+  @include flexy($dir: row, $just: space-between);
+}
+
+.widget--settings-buttons {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: .8em 0;
+  background-color: #7476bf;
+  border-radius: 5px;
+  border: 1px solid #7476bf;
+  color: white;
+  flex-basis: 45%;
+}

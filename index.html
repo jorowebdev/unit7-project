@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>MyApp Dashboard</title>
   </head>
@@ -220,6 +221,43 @@
 
         <div class="settings widget">
           <h4 class="widget--title">Settings</h4>
+          <div class="widget--settings-container">
+            <div class="widget--settings-toggle-box">
+              <label class="switch-light switch-material" onclick="">
+                <input type="checkbox">
+                <p class="widget--settings-toggle-box-title">Send Email Notifications</p>
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+            <div class="widget--settings-toggle-box">
+              <label class="switch-light switch-material" onclick="">
+                <input type="checkbox">
+                <p class="widget--settings-toggle-box-title">Set Profile to Public</p>
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+            <select class="widget--settings-dropdown" id="timezone">
+              <option disabled selected>Select a Timezone</option>
+              <option>Hawaii</option>
+              <option>Alaska</option>
+              <option>Pacific</option>
+              <option>Mountain</option>
+              <option>Central</option>
+              <option>Eastern</option>
+            </select>
+            <div class="widget--settings-button-box">
+              <button class="widget--settings-buttons primary" id="save">Save</button>
+              <button class="widget--settings-buttons disabled" id="cancel">Cancel</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>

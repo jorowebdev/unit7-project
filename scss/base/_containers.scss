@@ -87,6 +87,7 @@ a {
   position: absolute;
   top: 23px;
   left: 17px;
+  cursor: default;
   @include mq($break-m) {
     visibility: hidden;
   }
@@ -133,6 +134,7 @@ a {
   padding-top: 5px;
   padding-right: 5px;
   font-size: 12px;
+  cursor: default;
   @include mq($break-m) {
     visibility: hidden;
   }
