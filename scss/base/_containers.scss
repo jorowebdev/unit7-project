@@ -35,8 +35,7 @@ a {
   // Grid position
   grid-area: header;
   // Flex styling
-  display: flex;
-  justify-content: center;
+  @include flexy($dir: row, $just: space-between);
   align-items: center;
   // Other
   position: sticky;
@@ -84,21 +83,28 @@ a {
 }
 
 .header--menu-button {
-  position: absolute;
-  top: 23px;
-  left: 17px;
+  margin-left: 10px;
   cursor: default;
   @include mq($break-m) {
     visibility: hidden;
   }
 }
 
+.header--title {
+  @include flexy($dir: row, $just: center);
+  flex-grow: 1;
+  @include mq($break-m) {
+  }
+}
+
+.section-two {
+  font-weight: lighter;
+}
+
 .header--notification-button {
-  position: absolute;
-  top: 26.5px;
-  right: 50px;
   width: 18px;
   height: 18px;
+  margin-right: 10px;
 }
 
 .header--notification-button-path {
@@ -108,12 +114,10 @@ a {
 }
 
 .header--member-profile {
-  position: absolute;
-  top: 23px;
-  right: 17px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 // Main styles
