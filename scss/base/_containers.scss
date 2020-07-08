@@ -104,9 +104,14 @@ a {
   font-weight: lighter;
 }
 
+.header--notification-container {
+  position: relative;
+}
+
 .header--notification-button {
   width: 18px;
   height: 18px;
+  margin-top: 5px;
   margin-right: 10px;
 }
 
@@ -114,6 +119,17 @@ a {
   fill: white;
   stroke: white;
   stroke-width: .5;
+}
+
+.header--notification-badge {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  text-align: center;
+  background-color: #81c98f;
+  border-radius: 50%;
 }
 
 .header--separator {
