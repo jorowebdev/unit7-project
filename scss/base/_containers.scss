@@ -92,8 +92,11 @@ a {
 
 .header--title {
   @include flexy($dir: row, $just: center);
-  flex-grow: 1;
+    flex-grow: 1;
   @include mq($break-m) {
+    @include flexy($just: flex-start);
+    order: -1;
+    margin-left: 20px;
   }
 }
 
@@ -113,11 +116,40 @@ a {
   stroke-width: .5;
 }
 
+.header--separator {
+  display: none;
+  @include mq($break-m) {
+    width: 1px;
+    height: 50px;
+    background-color: #4d4c72;
+    margin-right: 10px;
+    display: block;
+  }
+}
+
 .header--member-profile {
+  @include flexy($dir: row);
+  align-items: center;
+  margin-right: 10px;
+  @include mq($break-m) {
+    margin-right: 20px;
+  }
+}
+
+.header--member-profile-name {
+  display: none;
+  @include mq($break-m) {
+    display: block;
+  }
+}
+
+.header--member-profile-photo {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin-right: 10px;
+  @include mq($break-m) {
+    margin-right: 10px;
+  }
 }
 
 // Main styles
