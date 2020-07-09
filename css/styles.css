@@ -716,6 +716,7 @@ a {
 
 @media (min-width: 768px) {
   .dashboard--search-row,
+.alerts,
 .traffic,
 .social-stats {
     grid-column: 1/span 2;
@@ -1064,7 +1065,40 @@ a {
 }
 
 /* ============================================= */
-/*              Notification Imports            */
+/*              Notification Imports             */
 /* ============================================= */
+.alerts--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 20px 20px 0;
+}
+
+.alerts--card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #7476bf;
+  border-radius: 5px;
+}
+
+.alerts--card > * {
+  color: white;
+}
+
+.alerts--card > :nth-child(2n+1) {
+  align-self: center;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .alerts--card > :nth-child(2n+1) {
+    margin: 0 20px;
+  }
+}
+
+.alerts--card-text {
+  flex-grow: 1;
+  font-size: 0.9em;
+}
 
 /*# sourceMappingURL=styles.css.map */

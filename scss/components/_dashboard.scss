@@ -31,6 +31,7 @@
 // Dashboard grid components
 @include mq($break-m) {
   .dashboard--search-row,
+  .alerts,
   .traffic,
   .social-stats {
     grid-column: 1 / span 2;

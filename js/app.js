@@ -6,7 +6,19 @@ const notificationDropdown = document.querySelector('.header--notification-dropd
 const notificationCardCloseBtn = document.querySelector('.header--notification-item-close-btn');
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
+const alertsContainer = document.querySelector('.alerts--container');
 const footer = document.querySelector('.footer');
+
+window.onload = () => {
+  const newAlert = document.createElement("DIV");
+  newAlert.classList.add("alerts--card");
+  newAlert.innerHTML = `
+    <h5 class="alerts--card-title">Alert!</h5>
+    <p class="alerts--card-text">This is an alert.</p>
+    <i class="alerts--card-close-btn material-icons-round">close</i>
+  `;
+  alertsContainer.appendChild(newAlert);
+};
 
 menuButton.addEventListener('click', () => {
   if (!navMenu.style.width || navMenu.style.width == '0') {

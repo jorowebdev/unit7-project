@@ -1,3 +1,35 @@
 /* ============================================= */
-/*              Notification Imports            */
+/*              Notification Imports             */
 /* ============================================= */
+
+.alerts {
+
+}
+
+.alerts--container {
+  @include flexy($dir: column, $just: center);
+  margin: 20px 20px 20px 0;
+}
+
+.alerts--card {
+  @include flexy($dir: row, $just: space-between);
+  background-color: #7476bf;
+  border-radius: 5px;
+}
+
+.alerts--card > * {
+  color: white;
+}
+
+.alerts--card > :nth-child(2n+1) {
+  align-self: center;
+  margin: 10px;
+  @include mq($break-m) {
+    margin: 0 20px;
+  }
+}
+
+.alerts--card-text {
+  flex-grow: 1;
+  font-size: .9em;
+}
