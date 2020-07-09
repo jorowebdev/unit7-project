@@ -35,23 +35,27 @@ window.onload = () => {
 };
 
 settingsSaveBtn.addEventListener('click', () => {
-  for (let i = 0; i < checkBoxes; i++) {
-    console.log(checkBoxes[i]);
+  for (let i = 0; i < checkBoxes.length; i++) {
+    localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
+    console.log(localStorage.getItem(checkBoxes[i].value));
   }
 })
+
+window.onload = () => {
+  for (let i = 0; i < checkBoxes.length; i++) {
+    if (localStorage.getItem(checkBoxes[i].value) === "true") {
+      checkBoxes[i].checked = true;
+    } else {
+      checkBoxes[i].checked = false;
+    }
+  }
+}
 
 // window.onload = () => {
 //   if (supportsLocalStorage()) {
 //
 //   }
 // }
-
-// settingsSaveBtn.addEventListener('click', () => {
-//   localStorage.setItem(checkBox1.value, checkBox1.checked);
-//   console.log(checkBox1.checked);
-//   localStorage.setItem(checkBox2.value, checkBox2.checked);
-//   console.log(checkBox2.checked);
-// })
 
 // window.onload = () => {
 //   if (localStorage.getItem('email') === 'true') {
