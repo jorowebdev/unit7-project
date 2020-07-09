@@ -7,19 +7,19 @@ const notificationCardCloseBtn = document.querySelector('.header--notification-i
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
-const settingsSaveBtn = document.querySelector('#save');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
-const checkBox1 = document.querySelector('#widget-checkbox1');
-const checkBox2 = document.querySelector('#widget-checkbox2');
+const settingsTimezone = document.querySelector('#timezone');
+const settingsSaveBtn = document.querySelector('#save');
+const settingsCancelBtn = document.querySelector('#cancel');
 const footer = document.querySelector('.footer');
 
-// const supportsLocalStorage = () => {
-//   try {
-//     return 'localStorage' in window && window ['localStorage'] !== null;
-//   } catch(e) {
-//     return false;
-//   }
-// }
+const supportsLocalStorage = () => {
+  try {
+    return 'localStorage' in window && window ['localStorage'] !== null;
+  } catch(e) {
+    return false;
+  }
+}
 
 window.onload = () => {
   const alertsContainer = document.createElement("DIV");
@@ -34,39 +34,18 @@ window.onload = () => {
   alertsWidget.appendChild(alertsContainer);
 };
 
-settingsSaveBtn.addEventListener('click', () => {
-  for (let i = 0; i < checkBoxes.length; i++) {
-    localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
-    console.log(localStorage.getItem(checkBoxes[i].value));
-  }
-})
-
 window.onload = () => {
-  for (let i = 0; i < checkBoxes.length; i++) {
-    if (localStorage.getItem(checkBoxes[i].value) === "true") {
-      checkBoxes[i].checked = true;
-    } else {
-      checkBoxes[i].checked = false;
+  if (supportsLocalStorage()) {
+    for (let i = 0; i < checkBoxes.length; i++) {
+      if (localStorage.getItem(checkBoxes[i].value) === "true") {
+        checkBoxes[i].checked = true;
+      } else {
+        checkBoxes[i].checked = false;
+      }
     }
+    settingsTimezone.value = localStorage.getItem(settingsTimezone.id);
   }
 }
-
-// window.onload = () => {
-//   if (supportsLocalStorage()) {
-//
-//   }
-// }
-
-// window.onload = () => {
-//   if (localStorage.getItem('email') === 'true') {
-//     checkBox1.checked = true;
-//   } else {
-//     checkBox1.checked = false;
-//   }
-// }
-
-
-
 
 menuButton.addEventListener('click', () => {
   if (!navMenu.style.width || navMenu.style.width == '0') {
@@ -125,4 +104,20 @@ alertsWidget.addEventListener('click', (e) => {
     parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
     alertsWidget.removeChild(alertsWidget.firstElementChild);
   }
+})
+
+settingsSaveBtn.addEventListener('click', () => {
+  for (let i = 0; i < checkBoxes.length; i++) {
+    localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
+  }
+  localStorage.setItem(settingsTimezone.id, settingsTimezone.value);
+})
+
+settingsCancelBtn.addEventListener('click', () => {
+  localStorage.clear();
+  for (let i = 0; i < checkBoxes.length; i++) {
+    checkBoxes[i].checked = false;
+    console.log(checkBoxes[i].checked);
+  }
+  settingsTimezone.selectedIndex = 0;
 })
