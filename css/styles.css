@@ -478,9 +478,75 @@ a {
   right: 10px;
   width: 5px;
   height: 5px;
-  text-align: center;
   background-color: #81c98f;
   border-radius: 50%;
+}
+
+.header--notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  width: 200px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 101;
+}
+
+.header--notification-dropdown:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+  border-left: 8px solid transparent;
+  position: absolute;
+  top: -16px;
+  right: 7px;
+}
+
+.header--notification-dropdown-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--notification-dropdown-card:hover {
+  background-color: #dbdbdb;
+}
+
+.header--notification-dropdown-card:nth-child(1n+2) {
+  border-top: 1px solid #dbdbdb;
+}
+
+.header--notification-dropdown-card:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.header--notification-dropdown-card:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.header--notification-item-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: #81c98f;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.header--notification-item-text {
+  font-size: 0.7em;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.header--notification-item-close-btn {
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 .header--separator {
