@@ -9,19 +9,34 @@ const dashboardSection = document.querySelector('.dashboard');
 const footer = document.querySelector('.footer');
 
 menuButton.addEventListener('click', () => {
-  navMenu.style.width = '62px';
-  dashboardSection.style.marginLeft = '62px';
-  footer.style.marginLeft = '62px';
+  if (!navMenu.style.width || navMenu.style.width == '0') {
+    navMenu.style.width = '62px';
+    dashboardSection.style.marginLeft = '62px';
+    footer.style.marginLeft = '62px';
+  } else {
+    navMenu.style.width = '0';
+    navMenu.style.width = '';
+    dashboardSection.style.marginLeft = '0';
+    dashboardSection.style.marginLeft = '';
+    footer.style.marginLeft = '0';
+    footer.style.marginLeft = '';
+  }
 });
 
-navCloseButton.addEventListener('click', () => {
-  navMenu.style.width = '0';
-  navMenu.style.width = '';
-  dashboardSection.style.marginLeft = '0';
-  dashboardSection.style.marginLeft = '';
-  footer.style.marginLeft = '0';
-  footer.style.marginLeft = '';
-});
+// menuButton.addEventListener('click', () => {
+//   navMenu.style.width = '62px';
+//   dashboardSection.style.marginLeft = '62px';
+//   footer.style.marginLeft = '62px';
+// });
+
+// navCloseButton.addEventListener('click', () => {
+//   navMenu.style.width = '0';
+//   navMenu.style.width = '';
+//   dashboardSection.style.marginLeft = '0';
+//   dashboardSection.style.marginLeft = '';
+//   footer.style.marginLeft = '0';
+//   footer.style.marginLeft = '';
+// });
 
 notificationButton.addEventListener('click', () => {
   notificationBadge.remove();

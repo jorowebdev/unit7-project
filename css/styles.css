@@ -635,15 +635,36 @@ a {
 
 .nav--ul {
   list-style: none;
-  margin-top: 13px;
+  margin-top: 15px;
   padding-left: 0;
   text-align: center;
+}
+
+.nav--ul-buttons {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav--ul-buttons:nth-child(1n+2) {
+  margin-top: 5px;
+}
+
+.nav--link:visited > svg > path {
+  fill: #dbdbdb;
+  stroke: transparent;
+}
+
+.nav--link:active > svg > path {
+  fill: white;
+  stroke: white;
 }
 
 .nav--svg-icon {
   width: 24px;
   height: 24px;
-  margin-bottom: 24px;
+}
+.nav--svg-icon-path {
+  fill: #fbfbfb;
 }
 
 .footer {
