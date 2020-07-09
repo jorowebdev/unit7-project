@@ -6,19 +6,63 @@ const notificationDropdown = document.querySelector('.header--notification-dropd
 const notificationCardCloseBtn = document.querySelector('.header--notification-item-close-btn');
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
-const alertsContainer = document.querySelector('.alerts--container');
+const alertsWidget = document.querySelector('.alerts');
+const settingsSaveBtn = document.querySelector('#save');
+const checkBoxes = document.querySelectorAll('.widget-checkbox');
+const checkBox1 = document.querySelector('#widget-checkbox1');
+const checkBox2 = document.querySelector('#widget-checkbox2');
 const footer = document.querySelector('.footer');
 
+// const supportsLocalStorage = () => {
+//   try {
+//     return 'localStorage' in window && window ['localStorage'] !== null;
+//   } catch(e) {
+//     return false;
+//   }
+// }
+
 window.onload = () => {
-  const newAlert = document.createElement("DIV");
-  newAlert.classList.add("alerts--card");
-  newAlert.innerHTML = `
-    <h5 class="alerts--card-title">Alert!</h5>
-    <p class="alerts--card-text">This is an alert.</p>
-    <i class="alerts--card-close-btn material-icons-round">close</i>
+  const alertsContainer = document.createElement("DIV");
+  alertsContainer.classList.add("alerts--container");
+  alertsContainer.innerHTML = `
+    <div class="alerts--card">
+      <h5 class="alerts--card-title">Alert!</h5>
+      <p class="alerts--card-text">This is an alert.</p>
+      <i class="alerts--card-close-btn material-icons-round">close</i>
+    </div>
   `;
-  alertsContainer.appendChild(newAlert);
+  alertsWidget.appendChild(alertsContainer);
 };
+
+settingsSaveBtn.addEventListener('click', () => {
+  for (let i = 0; i < checkBoxes; i++) {
+    console.log(checkBoxes[i]);
+  }
+})
+
+// window.onload = () => {
+//   if (supportsLocalStorage()) {
+//
+//   }
+// }
+
+// settingsSaveBtn.addEventListener('click', () => {
+//   localStorage.setItem(checkBox1.value, checkBox1.checked);
+//   console.log(checkBox1.checked);
+//   localStorage.setItem(checkBox2.value, checkBox2.checked);
+//   console.log(checkBox2.checked);
+// })
+
+// window.onload = () => {
+//   if (localStorage.getItem('email') === 'true') {
+//     checkBox1.checked = true;
+//   } else {
+//     checkBox1.checked = false;
+//   }
+// }
+
+
+
 
 menuButton.addEventListener('click', () => {
   if (!navMenu.style.width || navMenu.style.width == '0') {
@@ -68,5 +112,13 @@ notificationDropdown.addEventListener('click', (e) => {
     } else if (parentOfCloseBtn.previousSibling || parentOfCloseBtn.nextSibling) {
       parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
     }
+  }
+})
+
+alertsWidget.addEventListener('click', (e) => {
+  if (e.target.nodeName == "I") {
+    parentOfCloseBtn = e.target.parentElement;
+    parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
+    alertsWidget.removeChild(alertsWidget.firstElementChild);
   }
 })
