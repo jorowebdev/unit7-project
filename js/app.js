@@ -1,6 +1,7 @@
 const navMenu = document.querySelector('.nav');
 const menuButton = document.querySelector('.header--menu-button');
 const notificationButton = document.querySelector('.header--notification-button');
+const notificationBadge = document.querySelector('.header--notification-badge');
 const notificationDropdown = document.querySelector('.header--notification-dropdown');
 const notificationCardCloseBtn = document.querySelector('.header--notification-item-close-btn');
 const navCloseButton = document.querySelector('.nav--close-button');
@@ -23,6 +24,7 @@ navCloseButton.addEventListener('click', () => {
 });
 
 notificationButton.addEventListener('click', () => {
+  notificationBadge.remove();
   if (!notificationDropdown.style.display || notificationDropdown.style.display == 'none') {
     notificationDropdown.style.display = 'block';
   } else {

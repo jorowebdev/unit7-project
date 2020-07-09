@@ -436,6 +436,10 @@ a {
   }
 }
 
+.header--menu-button:hover {
+  cursor: pointer;
+}
+
 .header--title {
   display: flex;
   flex-direction: row;
@@ -466,6 +470,10 @@ a {
   margin-right: 10px;
 }
 
+.header--notification-button:hover {
+  cursor: pointer;
+}
+
 .header--notification-button-path {
   fill: white;
   stroke: white;
@@ -493,6 +501,7 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 101;
   display: none;
+  transition: max-height 0.3s ease-out;
 }
 
 .header--notification-dropdown:after {
@@ -506,6 +515,7 @@ a {
   position: absolute;
   top: -16px;
   right: 7px;
+  z-index: 100;
 }
 
 .header--notification-dropdown-card {
@@ -531,6 +541,10 @@ a {
   border-radius: 0 0 5px 5px;
 }
 
+.header--notification-dropdown-card:only-child {
+  border-radius: 5px;
+}
+
 .header--notification-item-bullet {
   width: 5px;
   height: 5px;
@@ -548,6 +562,9 @@ a {
 .header--notification-item-close-btn {
   font-size: 12px;
   margin-right: 5px;
+}
+.header--notification-item-close-btn:hover {
+  cursor: pointer;
 }
 
 .header--separator {
