@@ -7,6 +7,7 @@ const notificationCardCloseBtn = document.querySelector('.header--notification-i
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
+const settingsAlert = document.querySelector('.small-notification');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
 const settingsTimezone = document.querySelector('#timezone');
 const settingsSaveBtn = document.querySelector('#save');
@@ -32,9 +33,7 @@ window.onload = () => {
     </div>
   `;
   alertsWidget.appendChild(alertsContainer);
-};
 
-window.onload = () => {
   if (supportsLocalStorage()) {
     for (let i = 0; i < checkBoxes.length; i++) {
       if (localStorage.getItem(checkBoxes[i].value) === "true") {
@@ -43,9 +42,24 @@ window.onload = () => {
         checkBoxes[i].checked = false;
       }
     }
-    settingsTimezone.value = localStorage.getItem(settingsTimezone.id);
+    if (localStorage.getItem(settingsTimezone.id) != null) {
+      settingsTimezone.value = localStorage.getItem(settingsTimezone.id);
+    }
   }
-}
+};
+
+// window.onload = () => {
+//   if (supportsLocalStorage()) {
+//     for (let i = 0; i < checkBoxes.length; i++) {
+//       if (localStorage.getItem(checkBoxes[i].value) === "true") {
+//         checkBoxes[i].checked = true;
+//       } else {
+//         checkBoxes[i].checked = false;
+//       }
+//     }
+//     settingsTimezone.value = localStorage.getItem(settingsTimezone.id);
+//   }
+// }
 
 menuButton.addEventListener('click', () => {
   if (!navMenu.style.width || navMenu.style.width == '0') {
@@ -111,6 +125,12 @@ settingsSaveBtn.addEventListener('click', () => {
     localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
   }
   localStorage.setItem(settingsTimezone.id, settingsTimezone.value);
+  settingsAlert.style.width = '92.11px';
+  settingsAlert.style.opacity = '100%';
+  setTimeout(() => {
+    settingsAlert.style.width = '0px';
+    settingsAlert.style.opacity = '1';
+  }, 2000);
 })
 
 settingsCancelBtn.addEventListener('click', () => {

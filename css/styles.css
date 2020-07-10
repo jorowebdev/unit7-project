@@ -750,6 +750,28 @@ a {
 .widget--settings-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.small-notification {
+  position: absolute;
+  top: -41px;
+  left: 80px;
+  height: 24px;
+  width: 0px;
+  opacity: 1;
+  background: #80C98F;
+  border-radius: 5px;
+  color: #fbfbfb;
+  font-size: 0.9em;
+  transition: width 0.3s ease;
+}
+
+.small-notification-header {
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+  margin: 5px 0;
 }
 
 .switch-light {
@@ -779,7 +801,7 @@ a {
   font-weight: lighter;
 }
 
-.widget--settings-container > * {
+.widget--settings-container > :nth-child(1n+2) {
   margin: 15px 0;
 }
 
