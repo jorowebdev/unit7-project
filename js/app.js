@@ -7,6 +7,7 @@ const notificationCardCloseBtn = document.querySelector('.header--notification-i
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
+const autcompleteInput = document.querySelector('#userField');
 const settingsAlert = document.querySelector('.small-notification');
 const settingsAlertMessage = document.querySelector('.small-notification-header');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
@@ -92,6 +93,27 @@ alertsWidget.addEventListener('click', (e) => {
     alertsWidget.removeChild(alertsWidget.firstElementChild);
   }
 })
+
+$(function(){
+  const data = [
+    "Dennis Nedry",
+    "Dr. Alan Grant",
+    "Dr. Ellie Sattler",
+    "Dr. Henry Wu",
+    "Dr. Ian Malcom",
+    "John Hammond",
+    "Lex Murphy",
+    "Mr. DNA",
+    "Ray Arnold",
+    "Robert Muldoon",
+    "Tim Murphy"
+  ];
+  $("#userField").autocomplete({
+    source:data
+  });
+});
+
+$('testMessage').slideDown;
 
 settingsSaveBtn.addEventListener('click', () => {
   for (let i = 0; i < checkBoxes.length; i++) {
