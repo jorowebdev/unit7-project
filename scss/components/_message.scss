@@ -4,6 +4,32 @@
 
 .widget--container-message {
   @include flexy($dir: column);
+  position: relative;
+}
+
+.message-alert {
+  position: absolute;
+  top: -41px;
+  left: 125px;
+  height: 24px;
+  width: 0px;
+  opacity: 1;
+  background: #80C98F;
+  border-radius: 5px;
+  color: #fbfbfb;
+  font-size: .9em;
+  transition: width 0.3s ease;
+}
+
+.message-small-alert-header {
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+  margin: 5px 0;
+}
+
+.flex-form {
+  @include flexy($dir: column);
 }
 
 .widget--container-message-input {
@@ -39,8 +65,18 @@
   border-radius: 5px;
   border: 1px solid #7476bf;
   color: white;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  &:active {
+    background-color: lighten(#7476bf, 10%);
+    border-color: lighten(#7476bf, 10%);
+  }
 }
 
-.widget--container-message > :nth-child(1n+2) {
+.widget--container-message > :nth-child(1n+3) {
   margin-top: 20px;
 }

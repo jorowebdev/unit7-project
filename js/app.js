@@ -8,8 +8,13 @@ const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
 const autcompleteInput = document.querySelector('#userField');
+const messageAlert = document.querySelector('.message-alert');
+const messageAlertText = document.querySelector('#messageAlert');
+const messageUserInput = document.querySelector('#userField');
+const messageUserTextArea = document.querySelector('#messageField');
+const messageBtn = document.querySelector('#message-send');
 const settingsAlert = document.querySelector('.small-notification');
-const settingsAlertMessage = document.querySelector('.small-notification-header');
+const settingsAlertMessage = document.querySelector('#testMessage');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
 const settingsTimezone = document.querySelector('#timezone');
 const settingsSaveBtn = document.querySelector('#save');
@@ -114,6 +119,31 @@ $(function(){
 });
 
 $('testMessage').slideDown;
+
+messageBtn.addEventListener('click', () => {
+  if (messageUserInput.value.length == 0 && messageUserTextArea.value.length == 0) {
+    messageAlertText.innerHTML = `user & message fields required!`;
+    messageAlert.style.backgroundColor = "#b91400";
+  } else if (messageUserInput.value.length == 0) {
+    messageAlertText.innerHTML = `user field required!`;
+    messageAlert.style.backgroundColor = "#b91400";
+  } else if (messageUserTextArea.value.length == 0) {
+    messageAlertText.innerHTML = `message field required!`;
+    messageAlert.style.backgroundColor = "#b91400";
+  } else {
+    messageAlertText.innerHTML = `message sent!`;
+    messageAlert.style.backgroundColor = "#80C98F";
+    messageUserInput.value = '';
+    messageUserTextArea.value = '';
+  }
+  messageAlert.style.width = '185px';
+  messageAlert.style.opacity = '100%';
+  setTimeout(() => {
+    messageAlert.style.width = '0px';
+    messageAlert.style.opacity = '1';
+  }, 2000);
+  false;
+})
 
 settingsSaveBtn.addEventListener('click', () => {
   for (let i = 0; i < checkBoxes.length; i++) {

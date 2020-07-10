@@ -243,9 +243,12 @@
         <div class="message widget">
           <h4 class="widget--title">Message User</h4>
           <div class="widget--container-message">
-            <input type="text" placeholder="Search for User" class="widget--container-message-input" id="userField">
-            <textarea class="widget--container-message-textarea" placeholder="Message for User" id="messageField" rows="5"></textarea>
-            <button class="widget--container-message-button">Send</button>
+            <div class="message-alert">
+              <h5 class="message-small-alert-header" id="messageAlert">test test test</h5>
+            </div>
+            <input type="text" placeholder="Search for User" class="widget--container-message-input" id="userField" name="userField">
+            <textarea class="widget--container-message-textarea" placeholder="Message for User" id="messageField" name="messageField" rows="5"></textarea>
+            <button class="widget--container-message-button" id="message-send">Send</button>
           </div>
         </div>
 
