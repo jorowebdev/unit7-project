@@ -7,6 +7,7 @@ const notificationCardCloseBtn = document.querySelector('.header--notification-i
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
+const dailyCanvas = document.querySelector('#daily-chart');
 const autcompleteInput = document.querySelector('#userField');
 const messageAlert = document.querySelector('.message-alert');
 const messageAlertText = document.querySelector('#messageAlert');
@@ -99,6 +100,53 @@ alertsWidget.addEventListener('click', (e) => {
   }
 })
 
+const dailyData = {
+  labels: ["S", "M", "T", "W", "Th", "F", "Sa"],
+  datasets: [{
+      label: '# of Hits',
+      data: [75, 105, 180, 125, 245, 210, 110],
+      backgroundColor: '#7476bf',
+      borderWidth: 1,
+      hoverBackgroundColor: '#4d4c72'
+  }]
+};
+
+const dailyOptions = {
+  scales: {
+    yAxes: [{
+      gridLines: {
+        drawTicks: false,
+      },
+      ticks: {
+        beginAtZero: true,
+        padding: 10,
+        max: 300
+      }
+    }],
+    xAxes: [{
+      gridLines: {
+        drawTicks: false
+      },
+      ticks: {
+        padding: 10,
+      }
+    }]
+  },
+  legend: {
+    display: false
+  }
+}
+
+let dailyChart = new Chart(dailyCanvas, {
+  type: 'bar',
+  data: dailyData,
+  options: dailyOptions
+});
+
+
+
+
+
 $(function(){
   const data = [
     "Dennis Nedry",
@@ -122,7 +170,7 @@ $('testMessage').slideDown;
 
 messageBtn.addEventListener('click', () => {
   if (messageUserInput.value.length == 0 && messageUserTextArea.value.length == 0) {
-    messageAlertText.innerHTML = `user & message fields required!`;
+    messageAlertText.innerHTML = `both fields required!`;
     messageAlert.style.backgroundColor = "#b91400";
   } else if (messageUserInput.value.length == 0) {
     messageAlertText.innerHTML = `user field required!`;
@@ -136,7 +184,7 @@ messageBtn.addEventListener('click', () => {
     messageUserInput.value = '';
     messageUserTextArea.value = '';
   }
-  messageAlert.style.width = '185px';
+  messageAlert.style.width = '150px';
   messageAlert.style.opacity = '100%';
   setTimeout(() => {
     messageAlert.style.width = '0px';

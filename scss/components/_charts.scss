@@ -2,6 +2,11 @@
 /*              Chart Imports                    */
 /* ============================================= */
 
+.widget--container-half {
+
+}
+
+
 // Traffic
 .traffic--header {
   @include flexy($dir: row, $just: space-between);
