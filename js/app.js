@@ -8,6 +8,7 @@ const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
 const alertsWidget = document.querySelector('.alerts');
 const settingsAlert = document.querySelector('.small-notification');
+const settingsAlertMessage = document.querySelector('.small-notification-header');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
 const settingsTimezone = document.querySelector('#timezone');
 const settingsSaveBtn = document.querySelector('#save');
@@ -48,19 +49,6 @@ window.onload = () => {
   }
 };
 
-// window.onload = () => {
-//   if (supportsLocalStorage()) {
-//     for (let i = 0; i < checkBoxes.length; i++) {
-//       if (localStorage.getItem(checkBoxes[i].value) === "true") {
-//         checkBoxes[i].checked = true;
-//       } else {
-//         checkBoxes[i].checked = false;
-//       }
-//     }
-//     settingsTimezone.value = localStorage.getItem(settingsTimezone.id);
-//   }
-// }
-
 menuButton.addEventListener('click', () => {
   if (!navMenu.style.width || navMenu.style.width == '0') {
     navMenu.style.width = '62px';
@@ -75,21 +63,6 @@ menuButton.addEventListener('click', () => {
     footer.style.marginLeft = '';
   }
 });
-
-// menuButton.addEventListener('click', () => {
-//   navMenu.style.width = '62px';
-//   dashboardSection.style.marginLeft = '62px';
-//   footer.style.marginLeft = '62px';
-// });
-
-// navCloseButton.addEventListener('click', () => {
-//   navMenu.style.width = '0';
-//   navMenu.style.width = '';
-//   dashboardSection.style.marginLeft = '0';
-//   dashboardSection.style.marginLeft = '';
-//   footer.style.marginLeft = '0';
-//   footer.style.marginLeft = '';
-// });
 
 notificationButton.addEventListener('click', () => {
   notificationBadge.remove();
@@ -125,6 +98,7 @@ settingsSaveBtn.addEventListener('click', () => {
     localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
   }
   localStorage.setItem(settingsTimezone.id, settingsTimezone.value);
+  settingsAlertMessage.innerHTML = `settings saved!`;
   settingsAlert.style.width = '92.11px';
   settingsAlert.style.opacity = '100%';
   setTimeout(() => {
@@ -137,7 +111,13 @@ settingsCancelBtn.addEventListener('click', () => {
   localStorage.clear();
   for (let i = 0; i < checkBoxes.length; i++) {
     checkBoxes[i].checked = false;
-    console.log(checkBoxes[i].checked);
   }
   settingsTimezone.selectedIndex = 0;
+  settingsAlertMessage.innerHTML = `settings cleared!`;
+  settingsAlert.style.width = '100px';
+  settingsAlert.style.opacity = '100%';
+  setTimeout(() => {
+    settingsAlert.style.width = '0px';
+    settingsAlert.style.opacity = '1';
+  }, 2000);
 })
