@@ -2,28 +2,13 @@
 /*              Social Stats Imports             */
 /* ============================================= */
 
-.widget--container-full {
-  @include mq(break-m) {
-    width: 80vw;
-  }
-}
-
-.widget--container-half {
-  @include mq(break-m) {
-    width: 40vw;
-  }
-}
-
-.widget--traffic {
-}
-
-.widget--social {
+.widget--container-social {
   @include mq($break-m) {
     @include flexy($dir: row, $just: space-between);
   }
 }
 
-.social--card {
+.widget--container-social-cards {
   @include flexy($dir: row, $just: flex-start);
   align-items: center;
   background-color: #fbfbfb;
@@ -38,29 +23,29 @@
   }
 }
 
-.social--card-svg-div {
+.social-stats--svg-container {
   background-color: #7476bf;
   padding: 15px;
   border-radius: 50%;
   margin: 15px;
 }
 
-.social--card-svg {
+.social-stats--svg-icon {
   width: 36px;
   height: 36px;
 }
 
-.social--card-svg-path {
+.social-stats--svg-icon-path {
   fill: white;
 }
 
-.social--card-text-title {
+.widget--social-cards-title {
   color: #7476bf;
   font-weight: bold;
   margin: 0;
 }
 
-.social--card-text-stat {
+.widget--social-cards-number {
   font-size: 2rem;
   font-weight: 300;
   margin: 0;

@@ -184,6 +184,7 @@ let trafficData = {
 
 const trafficOptions = {
   aspectRatio: 2.5,
+  maintainAspectRatio: true,
   animation: {
     duration: 0
   },
@@ -229,6 +230,7 @@ const dailyData = {
 };
 
 const dailyOptions = {
+  maintainAspectRatio: true,
   scales: {
     yAxes: [{
       gridLines: {
@@ -275,6 +277,7 @@ const mobileData = {
 };
 
 const mobileOptions = {
+  maintainAspectRatio: true,
   legend: {
     position: 'right',
     labels: {

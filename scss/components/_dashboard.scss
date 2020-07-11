@@ -52,12 +52,24 @@
 
 .widget {
   margin-right: 20px;
-
-  // border: 1px solid green;
 }
 
 .widget--title {
   font-weight: 400;
   text-transform: uppercase;
   margin: 20px 0;
+}
+
+.widget--container-full {
+  position: relative;
+  @include mq(break-m) {
+    width: 90vw;
+  }
+}
+
+.widget--container-half {
+  position: relative;
+  @include mq(break-m) {
+    width: 90vw;
+  }
 }
