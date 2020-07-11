@@ -1173,4 +1173,8 @@ a {
   font-size: 0.9em;
 }
 
+.alerts--card-close-btn {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

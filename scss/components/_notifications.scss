@@ -2,10 +2,6 @@
 /*              Notification Imports             */
 /* ============================================= */
 
-.alerts {
-
-}
-
 .alerts--container {
   @include flexy($dir: column, $just: center);
   margin: 20px 20px 0 0;
@@ -32,4 +28,8 @@
 .alerts--card-text {
   flex-grow: 1;
   font-size: .9em;
+}
+
+.alerts--card-close-btn {
+  cursor: pointer;
 }
