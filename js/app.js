@@ -6,7 +6,7 @@ const notificationDropdown = document.querySelector('.header--notification-dropd
 const notificationCardCloseBtn = document.querySelector('.header--notification-item-close-btn');
 const navCloseButton = document.querySelector('.nav--close-button');
 const dashboardSection = document.querySelector('.dashboard');
-const alertsSection = document.querySelector('.alerts');
+const alertsWidget = document.querySelector('.alerts');
 const trafficChartNav = document.querySelector('.traffic--nav');
 const trafficChartLinks = document.querySelectorAll('.traffic--nav-link');
 const trafficCanvas = document.querySelector('#traffic-chart');
@@ -44,7 +44,7 @@ window.onload = () => {
       <i class="alerts--card-close-btn material-icons-round">close</i>
     </div>
   `;
-  alertsSection.appendChild(alertsContainer);
+  alertsWidget.appendChild(alertsContainer);
 
   if (supportsLocalStorage()) {
     for (let i = 0; i < checkBoxes.length; i++) {
@@ -96,11 +96,11 @@ notificationDropdown.addEventListener('click', (e) => {
   }
 })
 
-alertsSection.addEventListener('click', (e) => {
+alertsWidget.addEventListener('click', (e) => {
   if (e.target.nodeName == "I") {
     parentOfCloseBtn = e.target.parentElement;
     parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
-    alertsSection.removeChild(alertsSection.firstElementChild);
+    alertsWidget.removeChild(alertsWidget.firstElementChild);
   }
 })
 
