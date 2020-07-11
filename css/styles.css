@@ -1127,7 +1127,13 @@ a {
   font-size: 0.7rem;
   border-radius: 16px;
   padding: 4px 7px 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.traffic--nav-link:hover {
   background-color: #80C98F;
+  color: #fbfbfb;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* ============================================= */
