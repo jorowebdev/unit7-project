@@ -83,14 +83,14 @@
 
 .widget--container-full {
   position: relative;
-  @include mq(break-m) {
-    width: 90vw;
-  }
+  // @include mq($break-m) {
+  //   width: 90vw;
+  // }
 }
 
 .widget--container-half {
   position: relative;
-  @include mq(break-m) {
-    width: 90vw;
-  }
+  // @include mq($break-m) {
+  //   width: 90vw;
+  // }
 }

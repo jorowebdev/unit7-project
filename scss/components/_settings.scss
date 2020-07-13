@@ -28,14 +28,11 @@
 }
 
 .settings--switch-container {
+  @include flexy($dir: row);
+  align-items: center;
   @include mq($break-m) {
     margin-bottom: 21px;
   }
-}
-
-.switch-light {
-  @include flexy($dir: row);
-  align-items: center;
 }
 
 .switch-material.switch-light input:checked ~ span {

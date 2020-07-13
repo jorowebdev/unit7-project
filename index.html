@@ -12,7 +12,7 @@
   </head>
   <body class="body">
 
-<!-- start of header container ----------------------------------------------->
+<!-- start of header container -->
 
     <header class="header">
       <i class="header--menu-btn material-icons-round">menu</i>
@@ -48,7 +48,7 @@
 
     <main class="main">
 
-<!-- start of nav container -------------------------------------------------->
+<!-- start of nav container -->
 
       <nav class="nav">
         <ul class="nav--ul">
@@ -83,7 +83,7 @@
         </ul>
       </nav>
 
-<!-- start of dashboard container -------------------------------------------->
+<!-- start of dashboard container -->
 
       <section class="dashboard">
         <div class="dashboard--title-searchbar-container">
@@ -99,12 +99,12 @@
         </div>
 
 
-<!-- start of alerts container ----------------------------------------------->
+<!-- start of alerts container -->
 
         <div class="alerts">
         </div>
 
-<!-- start of traffic widget ------------------------------------------------->
+<!-- start of traffic widget -->
 
         <section class="traffic widget">
           <div class="traffic--header">
@@ -121,7 +121,7 @@
           </div>
         </section>
 
-<!-- start of daily traffic widget ------------------------------------------->
+<!-- start of daily traffic widget -->
 
         <div class="daily-traffic widget">
           <h4 class="widget--title">Daily Traffic</h4>
@@ -130,7 +130,7 @@
           </div>
         </div>
 
-<!-- start of mobile users widget -------------------------------------------->
+<!-- start of mobile users widget -->
 
         <div class="mobile-users widget">
           <h4  class="widget--title">Mobile Users</h4>
@@ -139,7 +139,7 @@
           </div>
         </div>
 
-<!-- start of social stats widget -------------------------------------------->
+<!-- start of social stats widget -->
 
         <section class="social widget">
           <h4 class="widget--title">Social Stats</h4>
@@ -180,7 +180,7 @@
             </div>
         </section>
 
-<!-- start of new members widget --------------------------------------------->
+<!-- start of new members widget -->
 
         <div class="members widget">
           <h4 class="widget--title">New members</h4>
@@ -189,7 +189,7 @@
               <img class="members--card-img" src="/images/members/members-3.jpg" alt="profile of members">
               <div class="members--card-text">
                 <p class="members--card-text-name">Lex Murphy</p>
-                <email class="members--card-text-email">lmurphy@ingen.com</email>
+                <p class="members--card-text-email">lmurphy@ingen.com</p>
               </div>
               <p class="members--card-date">7/4/93</p>
             </div>
@@ -197,7 +197,7 @@
               <img class="members--card-img" src="/images/members/members-1.jpg" alt="profile of members">
               <div class="members--card-text">
                 <p class="members--card-text-name">Dr. Ellie Satler</p>
-                <email class="members--card-text-email">esatler@ingen.com</email>
+                <p class="members--card-text-email">esatler@ingen.com</p>
               </div>
               <p class="members--card-date">6/30/93</p>
             </div>
@@ -205,7 +205,7 @@
               <img class="members--card-img" src="/images/members/members-2.jpg" alt="profile of members">
               <div class="members--card-text">
                 <p class="members--card-text-name">Dr. Ian Malcolm</p>
-                <email class="members--card-text-email">imalcolm@ingen.com</email>
+                <p class="members--card-text-email">imalcolm@ingen.com</p>
               </div>
               <p class="members--card-date">6/30/93</p>
             </div>
@@ -213,14 +213,14 @@
               <img class="members--card-img" src="/images/members/members-4.jpg" alt="profile of members">
               <div class="members--card-text">
                 <p class="members--card-text-name">John Hammond</p>
-                <email class="members--card-text-email">jhammond@ingen.com</email>
+                <p class="members--card-text-email">jhammond@ingen.com</p>
               </div>
               <p class="members--card-date">6/9/93</p>
             </div>
           </div>
         </div>
 
-<!-- start of recent activity widget ----------------------------------------->
+<!-- start of recent activity widget -->
 
         <div class="activity widget">
           <h4 class="widget--title">Recent Activity</h4>
@@ -260,7 +260,7 @@
           </div>
         </div>
 
-<!-- start of message user widget -------------------------------------------->
+<!-- start of message user widget -->
 
         <div class="message widget">
           <h4 class="widget--title">Message User</h4>
@@ -274,7 +274,7 @@
           </div>
         </div>
 
-<!-- start of settings widget ------------------------------------------------>
+<!-- start of settings widget -->
 
         <div class="settings widget">
           <h4 class="widget--title">Settings</h4>
@@ -283,9 +283,9 @@
               <h5 class="settings--alert-text" id="settingsAlertText"></h5>
             </div>
             <div class="settings--switch-container">
+              <p class="settings--switch-container-title">Send Email Notifications</p>
               <label class="switch-light switch-material" onclick="">
                 <input type="checkbox" name="checkbox1" value="email" class="settings--switch-container-checkbox" id="widget-checkbox1">
-                <p class="settings--switch-container-title">Send Email Notifications</p>
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -294,9 +294,9 @@
               </label>
             </div>
             <div class="settings--switch-container">
+              <p class="settings--switch-container-title">Set Profile to Public</p>
               <label class="switch-light switch-material" onclick="">
                 <input type="checkbox" name="checkbox2" value="profile" class="settings--switch-container-checkbox" id="widget-checkbox2">
-                <p class="settings--switch-container-title">Set Profile to Public</p>
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -324,9 +324,11 @@
 
     <footer class="footer">
       <h2 class="footer--text">Copyright &copy; 1993. Ingen. All Rights Reserved.</h2>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

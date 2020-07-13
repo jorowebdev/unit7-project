@@ -727,10 +727,6 @@ sup {
   font-size: 0.6em;
 }
 
-email {
-  font-size: 0.7em;
-}
-
 input::placeholder,
 textarea::placeholder,
 select {
@@ -827,19 +823,9 @@ select {
 .widget--container-full {
   position: relative;
 }
-@media (min-width: break-m) {
-  .widget--container-full {
-    width: 90vw;
-  }
-}
 
 .widget--container-half {
   position: relative;
-}
-@media (min-width: break-m) {
-  .widget--container-half {
-    width: 90vw;
-  }
 }
 
 /* ============================================= */
@@ -871,16 +857,15 @@ select {
   margin: 5px 0;
 }
 
+.settings--switch-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 @media (min-width: 768px) {
   .settings--switch-container {
     margin-bottom: 21px;
   }
-}
-
-.switch-light {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .switch-material.switch-light input:checked ~ span {
@@ -1016,11 +1001,11 @@ select {
 }
 
 .members--card-text-email {
+  margin: 0;
   font-weight: lighter;
 }
 
 .members--card-date {
-  font-weight: lighter;
   text-align: right;
 }
 
