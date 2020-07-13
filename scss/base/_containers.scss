@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  
+}
+
 // Containers
 
 .body {
@@ -171,6 +175,7 @@ a {
 .header--notification-dropdown-card {
   @include flexy($dir: row, $just: space-between);
   align-items: center;
+  cursor: pointer;
 }
 
 .header--notification-dropdown-card:hover {
@@ -198,17 +203,15 @@ a {
   height: 5px;
   background-color: #81c98f;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .header--notification-dropdown-card-text {
-  font-size: .7em;
   flex-grow: 1;
   text-align: left;
 }
 
 .header--notification-dropdown-card-btn {
-  font-size: 12px;
   margin-right: 5px;
   &:hover {
     cursor: pointer;
@@ -265,7 +268,6 @@ a {
   align-self: flex-end;
   padding-top: 5px;
   padding-right: 5px;
-  font-size: 12px;
   cursor: default;
   @include mq($break-m) {
     visibility: hidden;

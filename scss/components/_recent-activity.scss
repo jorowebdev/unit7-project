@@ -9,7 +9,6 @@
 .activity--card {
   @include flexy($dir: row);
   align-items: center;
-  font-size: .9em;
 }
 .activity--card:nth-child(1n+2) {
   border-top: 1px solid #dbdbdb;
@@ -30,10 +29,9 @@
   margin: 0;
 }
 
-.activity--card-text-desc {
+.activity--card-text-et {
   margin: 0;
 }
 
 .activity--card-link {
-  font-size: 1.5em;
 }

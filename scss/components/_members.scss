@@ -9,7 +9,6 @@
 .members--card {
   @include flexy($dir: row);
   align-items: center;
-  font-size: .9em;
 }
 
 .members--card:nth-child(1n+2) {
@@ -33,7 +32,6 @@
 
 .members--card-text-email {
   font-weight: lighter;
-  font-size: .7em;
 }
 
 .members--card-date {

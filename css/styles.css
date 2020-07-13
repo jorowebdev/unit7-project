@@ -523,6 +523,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .header--notification-dropdown-card:hover {
@@ -550,17 +551,15 @@ a {
   height: 5px;
   background-color: #81c98f;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .header--notification-dropdown-card-text {
-  font-size: 0.7em;
   flex-grow: 1;
   text-align: left;
 }
 
 .header--notification-dropdown-card-btn {
-  font-size: 12px;
   margin-right: 5px;
 }
 .header--notification-dropdown-card-btn:hover {
@@ -624,7 +623,6 @@ a {
   align-self: flex-end;
   padding-top: 5px;
   padding-right: 5px;
-  font-size: 12px;
   cursor: default;
 }
 @media (min-width: 768px) {
@@ -678,6 +676,20 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 
+p {
+  font-size: 0.8em;
+}
+
+email {
+  font-size: 0.7em;
+}
+
+input::placeholder,
+textarea::placeholder,
+select {
+  font-size: 0.8em;
+}
+
 /* ============================================= */
 /*              Component Imports                */
 /* ============================================= */
@@ -697,7 +709,7 @@ a {
   border-bottom: 1px solid #dbdbdb;
 }
 
-.dashboard--search-row {
+.dashboard--title-searchbar-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -721,7 +733,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .dashboard--search-row,
+  .dashboard--title-searchbar-container,
 .alerts,
 .traffic,
 .social {
@@ -802,7 +814,6 @@ a {
   background: #80C98F;
   border-radius: 5px;
   color: #fbfbfb;
-  font-size: 0.9em;
   transition: width 0.3s ease;
 }
 
@@ -815,7 +826,7 @@ a {
 
 @media (min-width: 768px) {
   .settings--switch-container {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 }
 
@@ -839,7 +850,7 @@ a {
 }
 
 .settings--dropdown {
-  padding: 0.8em;
+  padding: 1em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
@@ -847,7 +858,7 @@ a {
 }
 
 .widget--settings-container > :nth-child(1n+3) {
-  margin-top: 20px;
+  margin-top: 21.5px;
 }
 
 .settings--btn-container {
@@ -918,7 +929,6 @@ a {
 
 .searchbar--container-icon {
   position: absolute;
-  font-size: 15px;
   color: #dbdbdb;
   top: 10px;
   right: 10px;
@@ -936,7 +946,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 0.9em;
 }
 
 .members--card:nth-child(1n+2) {
@@ -960,7 +969,6 @@ a {
 
 .members--card-text-email {
   font-weight: lighter;
-  font-size: 0.7em;
 }
 
 .members--card-date {
@@ -987,7 +995,6 @@ a {
   background: #80C98F;
   border-radius: 5px;
   color: #fbfbfb;
-  font-size: 0.9em;
   transition: width 0.3s ease;
 }
 
@@ -1058,7 +1065,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 0.9em;
 }
 
 .activity--card:nth-child(1n+2) {
@@ -1080,12 +1086,8 @@ a {
   margin: 0;
 }
 
-.activity--card-text-desc {
+.activity--card-text-et {
   margin: 0;
-}
-
-.activity--card-link {
-  font-size: 1.5em;
 }
 
 /* ============================================= */
@@ -1143,13 +1145,14 @@ a {
 
 .social--card-text-title {
   color: #7476bf;
+  font-size: 1em;
   font-weight: bold;
   margin: 0;
 }
 
 .social--card-text-number {
-  font-size: 2rem;
-  font-weight: 300;
+  font-weight: lighter;
+  font-size: 2em;
   margin: 0;
   padding-right: 15px;
 }
@@ -1176,7 +1179,7 @@ a {
 .traffic--nav-link {
   display: inline-block;
   height: 20px;
-  font-size: 0.7rem;
+  font-size: 0.7em;
   border-radius: 16px;
   padding: 4px 7px 0;
   cursor: pointer;
@@ -1210,8 +1213,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: #7476bf;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .alerts--card > * {
@@ -1219,8 +1223,7 @@ a {
 }
 
 .alerts--card > :nth-child(2n+1) {
-  align-self: center;
-  margin: 10px;
+  margin: 0 15px 0 15px;
 }
 @media (min-width: 768px) {
   .alerts--card > :nth-child(2n+1) {
@@ -1230,7 +1233,10 @@ a {
 
 .alerts--card-text {
   flex-grow: 1;
-  font-size: 0.9em;
+}
+
+.alerts--card-close-btn {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

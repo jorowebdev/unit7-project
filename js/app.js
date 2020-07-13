@@ -349,7 +349,7 @@ settingsSaveBtn.addEventListener('click', () => {
   }
   localStorage.setItem(settingsTimezone.id, settingsTimezone.value);
   settingsAlertMessage.innerHTML = `settings saved!`;
-  settingsAlert.style.width = '92.11px';
+  settingsAlert.style.width = '100px';
   settingsAlert.style.opacity = '100%';
   setTimeout(() => {
     settingsAlert.style.width = '0px';
@@ -365,7 +365,7 @@ settingsCancelBtn.addEventListener('click', () => {
   }
   settingsTimezone.selectedIndex = 0;
   settingsAlertMessage.innerHTML = `settings cleared!`;
-  settingsAlert.style.width = '100px';
+  settingsAlert.style.width = '110px';
   settingsAlert.style.opacity = '100%';
   setTimeout(() => {
     settingsAlert.style.width = '0px';

@@ -5,3 +5,17 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+p {
+  font-size: .8em;
+}
+
+email {
+  font-size: .7em;
+}
+
+input::placeholder,
+textarea::placeholder,
+select {
+  font-size: .8em;
+}

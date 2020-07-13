@@ -15,7 +15,7 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
-.dashboard--search-row {
+.dashboard--title-searchbar-container {
   @include flexy($dir: row, $just: space-between);
   background-color: #fbfbfb;
   padding-left: 10px;
@@ -38,7 +38,7 @@
 
 // Dashboard grid widgets
 @include mq($break-m) {
-  .dashboard--search-row,
+  .dashboard--title-searchbar-container,
   .alerts,
   .traffic,
   .social {

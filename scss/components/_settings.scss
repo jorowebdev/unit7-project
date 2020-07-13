@@ -17,7 +17,6 @@
   background: #80C98F;
   border-radius: 5px;
   color: #fbfbfb;
-  font-size: .9em;
   transition: width 0.3s ease;
 }
 
@@ -30,7 +29,7 @@
 
 .settings--switch-container {
   @include mq($break-m) {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
   }
 }
 
@@ -53,7 +52,7 @@
 }
 
 .settings--dropdown {
-  padding: .8em;
+  padding: 1em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
@@ -61,7 +60,7 @@
 }
 
 .widget--settings-container > :nth-child(1n+3) {
-  margin-top: 20px;
+  margin-top: 21.5px;
 }
 
 .settings--btn-container {
