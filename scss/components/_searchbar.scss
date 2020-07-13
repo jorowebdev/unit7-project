@@ -6,8 +6,8 @@
   @include flexy($dir: row, $just: flex-end);
   flex-basis: 100%;
   min-width: 0;
-  border-left: 1px solid #dbdbdb;
-  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid $dark-secondary;
+  border-bottom: 1px solid $dark-secondary;
 }
 
 .searchbar--container {
@@ -27,17 +27,17 @@
   min-width: 0; // Allows text field to shrink down
   padding: 5px 25px 5px 10px;
   border-radius: 5px;
-  border: solid 1px #dbdbdb;
+  border: solid 1px $dark-secondary;
 }
 
 .searchbar--container-input::placeholder {
-  color: #dbdbdb;
+  color: $dark-secondary;
 }
 
 .searchbar--container-icon {
   font-size: 20px;
   position: absolute;
-  color: #dbdbdb;
+  color: $dark-secondary;
   top: 10px;
   right: 10px;
 }

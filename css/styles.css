@@ -505,7 +505,6 @@ a {
   fill: white;
   stroke: white;
   stroke-width: 0.5;
-  transform-origin: 50% 50%;
 }
 
 .header--notification-badge {

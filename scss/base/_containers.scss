@@ -81,7 +81,7 @@ img {
 
 .header {
   z-index: 100;
-  background: #7476bf;
+  background: $light-primary;
   color: white;
 }
 
@@ -159,7 +159,6 @@ img {
   fill: white;
   stroke: white;
   stroke-width: .5;
-  transform-origin: 50% 50%;
 }
 
 .header--notification-badge {
@@ -168,7 +167,7 @@ img {
   right: 10px;
   width: 5px;
   height: 5px;
-  background-color: #81c98f;
+  background-color: $splash;
   border-radius: 50%;
 }
 
@@ -208,11 +207,11 @@ img {
 }
 
 .header--notification-dropdown-card:hover {
-  background-color: #dbdbdb;
+  background-color: $dark-secondary;
 }
 
 .header--notification-dropdown-card:nth-child(1n+2) {
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid $dark-secondary;
 }
 
 .header--notification-dropdown-card:first-child {
@@ -230,7 +229,7 @@ img {
 .header--notification-dropdown-card-bullet {
   width: 5px;
   height: 5px;
-  background-color: #81c98f;
+  background-color: $splash;
   border-radius: 50%;
   margin: 0 10px;
 }
@@ -320,7 +319,7 @@ img {
 }
 
 .nav--ul-btns-links:visited > svg > path {
-  fill: #dbdbdb;
+  fill: $dark-secondary;
   stroke: transparent;
 }
 
@@ -333,7 +332,7 @@ img {
   width: 24px;
   height: 24px;
   &-path {
-    fill: #fbfbfb;
+    fill: $light-secondary;
   }
 }
 
@@ -353,6 +352,6 @@ img {
   font-weight: lighter;
   font-size: .7em;
   text-align: right;
-  color: #dbdbdb;
+  color: $dark-secondary;
   margin: 20px 0;
 }

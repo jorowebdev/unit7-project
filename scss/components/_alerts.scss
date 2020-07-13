@@ -16,7 +16,7 @@
 .alerts--card {
   @include flexy($dir: row, $just: space-between);
   align-items: center;
-  background-color: #7476bf;
+  background-color: $light-primary;
   border-radius: 10px;
 }
 

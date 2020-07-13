@@ -18,8 +18,8 @@
 .social--cards{
   @include flexy($dir: row, $just: flex-start);
   align-items: center;
-  background-color: #fbfbfb;
-  border: 1px solid #dbdbdb;
+  background-color: $light-secondary;
+  border: 1px solid $dark-secondary;
   border-radius: 5px;
   @include mq($break-m) {
     width: 33.3%;
@@ -29,7 +29,7 @@
 }
 
 .social--svg-container {
-  background-color: #7476bf;
+  background-color: $light-primary;
   padding: 15px;
   border-radius: 50%;
   margin: 15px;
@@ -45,7 +45,7 @@
 }
 
 .social--card-text-title {
-  color: #7476bf;
+  color: $light-primary;
   font-size: 1em;
   font-weight: bold;
   margin: 0;

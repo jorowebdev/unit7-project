@@ -12,12 +12,12 @@
 }
 
 .dashboard > :nth-child(1n+3) {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid $dark-secondary;
 }
 
 .dashboard--title-searchbar-container {
   @include flexy($dir: row, $just: space-between);
-  background-color: #fbfbfb;
+  background-color: $light-secondary;
   padding-left: 10px;
 }
 
@@ -77,7 +77,7 @@
 .members,
 .message {
   @include mq($break-m) {
-  border-right: 1px solid #dbdbdb;
+  border-right: 1px solid $dark-secondary;
   }
 }
 

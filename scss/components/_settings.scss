@@ -16,7 +16,7 @@
   opacity: 1;
   background: #80C98F;
   border-radius: 5px;
-  color: #fbfbfb;
+  color: $light-secondary;
   transition: width 0.3s ease;
 }
 
@@ -39,11 +39,11 @@
 }
 
 .switch-material.switch-light input:checked ~ span {
-  background-color: lighten(#7476bf, 30%);
+  background-color: lighten($light-primary, 30%);
 }
 
 .switch-material.switch-light input:checked ~ span a {
-  background: #7476bf;
+  background: $light-primary;
 }
 
 .settings--switch-container-title {
@@ -53,8 +53,8 @@
 
 .settings--dropdown {
   padding: 1em;
-  background-color: #fbfbfb;
-  border: 1px solid #dbdbdb;
+  background-color: $light-secondary;
+  border: 1px solid $dark-secondary;
   border-radius: 5px;
   font-weight: lighter;
 }
@@ -71,9 +71,9 @@
   font-weight: 600;
   text-transform: uppercase;
   padding: .8em 0;
-  background-color: #7476bf;
+  background-color: $light-primary;
   border-radius: 5px;
-  border: 1px solid #7476bf;
+  border: 1px solid $light-primary;
   color: white;
   flex-basis: 45%;
   transition: all 0.3s ease-in-out;
@@ -83,7 +83,7 @@
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   &:active {
-    background-color: lighten(#7476bf, 10%);
-    border-color: lighten(#7476bf, 10%);
+    background-color: lighten($light-primary, 10%);
+    border-color: lighten($light-primary, 10%);
   }
 }

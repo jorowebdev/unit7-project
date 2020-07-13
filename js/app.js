@@ -110,7 +110,7 @@ const trafficDataHourly = {
   datasets: [{
     data: [800, 500, 1356, 1900, 1195, 900],
     backgroundColor: 'rgba(116, 118, 191, .3)',
-    borderColor: '#7476bf',
+    borderColor: '$7476bf',
     borderWidth: 1,
     lineTension: 0,
     pointRadius: 6,
