@@ -130,10 +130,36 @@ img {
   cursor: pointer;
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  55% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.header--notification-btn:hover {
+  animation: shake .5s ease-out;
+}
+
 .header--notification-btn-path {
   fill: white;
   stroke: white;
   stroke-width: .5;
+  transform-origin: 50% 50%;
 }
 
 .header--notification-badge {
