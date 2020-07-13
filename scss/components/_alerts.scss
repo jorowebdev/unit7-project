@@ -2,9 +2,15 @@
 /*              Alerts Imports             */
 /* ============================================= */
 
+.alerts {
+  margin: 10px 10px 0 10px;
+  @include mq($break-m) {
+    margin: 20px 20px 0 20px;
+  }
+}
+
 .alerts--container {
   @include flexy($dir: column, $just: center);
-  margin: 20px 20px 0 0;
 }
 
 .alerts--card {

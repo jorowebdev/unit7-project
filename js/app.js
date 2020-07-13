@@ -101,6 +101,7 @@ alertsWidget.addEventListener('click', (e) => {
     parentOfCloseBtn = e.target.parentElement;
     parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
     alertsWidget.removeChild(alertsWidget.firstElementChild);
+    alertsWidget.style.margin = 0;
   }
 })
 

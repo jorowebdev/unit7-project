@@ -684,17 +684,17 @@ a {
 /* ============================================= */
 /*              Dashboard Imports                */
 /* ============================================= */
-.dashboard {
-  padding-left: 10px;
-}
 @media (min-width: 768px) {
   .dashboard {
     display: grid;
     grid-template-columns: 50%;
     grid-template-rows: auto;
     margin-left: 0 !important;
-    padding-left: 20px;
   }
+}
+
+.dashboard > :nth-child(1n+3) {
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .dashboard--search-row {
@@ -702,6 +702,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   background-color: #fbfbfb;
+  padding-left: 10px;
 }
 
 .dashboard--title-container {
@@ -735,13 +736,28 @@ a {
   }
 }
 .widget {
-  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .widget {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .widget--title {
   font-weight: 400;
   text-transform: uppercase;
   margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .daily-traffic,
+.members,
+.message {
+    border-right: 1px solid #dbdbdb;
+  }
 }
 
 .widget--container-full {
@@ -792,6 +808,12 @@ a {
   margin: 5px 0;
 }
 
+@media (min-width: 768px) {
+  .settings--switch-container {
+    margin-bottom: 22px;
+  }
+}
+
 .switch-light {
   display: flex;
   flex-direction: row;
@@ -819,8 +841,8 @@ a {
   font-weight: lighter;
 }
 
-.widget--settings-container > :nth-child(1n+2) {
-  margin: 15px 0;
+.widget--settings-container > :nth-child(1n+3) {
+  margin-top: 20px;
 }
 
 .settings--btn-container {
@@ -1074,6 +1096,15 @@ a {
   }
 }
 
+.social--cards:nth-child(1n+2) {
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .social--cards:nth-child(1n+2) {
+    margin-top: 0;
+  }
+}
+
 .social--cards {
   display: flex;
   flex-direction: row;
@@ -1082,14 +1113,12 @@ a {
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
-  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .social--cards {
     width: 33.3%;
     max-width: 280px;
     margin-right: 10px;
-    margin-bottom: 0;
   }
 }
 
@@ -1159,11 +1188,19 @@ a {
 /* ============================================= */
 /*              Alerts Imports             */
 /* ============================================= */
+.alerts {
+  margin: 10px 10px 0 10px;
+}
+@media (min-width: 768px) {
+  .alerts {
+    margin: 20px 20px 0 20px;
+  }
+}
+
 .alerts--container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 20px 0 0;
 }
 
 .alerts--card {

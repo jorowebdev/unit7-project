@@ -3,19 +3,22 @@
 /* ============================================= */
 
 .dashboard {
-  padding-left: 10px;
   @include mq($break-m) {
     display: grid;
     grid-template-columns: 50%;
     grid-template-rows: auto;
     margin-left: 0 !important;
-    padding-left: 20px;
   }
+}
+
+.dashboard > :nth-child(1n+3) {
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .dashboard--search-row {
   @include flexy($dir: row, $just: space-between);
   background-color: #fbfbfb;
+  padding-left: 10px;
 }
 
 .dashboard--title-container {
@@ -28,7 +31,7 @@
   margin-right: 20px;
 }
 
-// Dashboard grid components
+// Dashboard grid widgets
 @include mq($break-m) {
   .dashboard--search-row,
   .alerts,
@@ -51,13 +54,26 @@
 // Widget styles
 
 .widget {
-  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  @include mq($break-m) {
+    padding: 0 20px 20px 20px;
+  }
 }
 
 .widget--title {
   font-weight: 400;
   text-transform: uppercase;
   margin: 20px 0;
+}
+
+.daily-traffic,
+.members,
+.message {
+  @include mq($break-m) {
+  border-right: 1px solid #dbdbdb;
+  }
 }
 
 .widget--container-full {

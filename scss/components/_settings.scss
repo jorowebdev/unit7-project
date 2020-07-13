@@ -28,6 +28,12 @@
   margin: 5px 0;
 }
 
+.settings--switch-container {
+  @include mq($break-m) {
+    margin-bottom: 22px;
+  }
+}
+
 .switch-light {
   @include flexy($dir: row);
   align-items: center;
@@ -54,8 +60,8 @@
   font-weight: lighter;
 }
 
-.widget--settings-container > :nth-child(1n+2) {
-  margin: 15px 0;
+.widget--settings-container > :nth-child(1n+3) {
+  margin-top: 20px;
 }
 
 .settings--btn-container {
