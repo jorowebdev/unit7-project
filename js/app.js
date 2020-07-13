@@ -18,12 +18,12 @@ const messageAlertText = document.querySelector('#messageAlert');
 const messageUserInput = document.querySelector('#userField');
 const messageUserTextArea = document.querySelector('#messageField');
 const messageBtn = document.querySelector('#messageSend');
-const settingsAlert = document.querySelector('.small-notification');
-const settingsAlertMessage = document.querySelector('#testMessage');
-const checkBoxes = document.querySelectorAll('.widget-checkbox');
+const settingsAlert = document.querySelector('.settings--alert');
+const settingsAlertMessage = document.querySelector('#settingsAlertText');
+const switchCheckboxes = document.querySelectorAll('.settings--switch-container-checkbox');
 const settingsTimezone = document.querySelector('#timezone');
-const settingsSaveBtn = document.querySelector('#save');
-const settingsCancelBtn = document.querySelector('#cancel');
+const settingsSaveBtn = document.querySelector('#settingsSaveBtn');
+const settingsCancelBtn = document.querySelector('#settingsCancelBtn');
 const footer = document.querySelector('.footer');
 
 const supportsLocalStorage = () => {
@@ -47,11 +47,11 @@ window.onload = () => {
   alertsWidget.appendChild(alertsContainer);
 
   if (supportsLocalStorage()) {
-    for (let i = 0; i < checkBoxes.length; i++) {
-      if (localStorage.getItem(checkBoxes[i].value) === "true") {
-        checkBoxes[i].checked = true;
+    for (let i = 0; i < switchCheckboxes.length; i++) {
+      if (localStorage.getItem(switchCheckboxes[i].value) === "true") {
+        switchCheckboxes[i].checked = true;
       } else {
-        checkBoxes[i].checked = false;
+        switchCheckboxes[i].checked = false;
       }
     }
     if (localStorage.getItem(settingsTimezone.id) != null) {
@@ -343,8 +343,8 @@ messageBtn.addEventListener('click', () => {
 })
 
 settingsSaveBtn.addEventListener('click', () => {
-  for (let i = 0; i < checkBoxes.length; i++) {
-    localStorage.setItem(checkBoxes[i].value, checkBoxes[i].checked);
+  for (let i = 0; i < switchCheckboxes.length; i++) {
+    localStorage.setItem(switchCheckboxes[i].value, switchCheckboxes[i].checked);
   }
   localStorage.setItem(settingsTimezone.id, settingsTimezone.value);
   settingsAlertMessage.innerHTML = `settings saved!`;
@@ -359,8 +359,8 @@ settingsSaveBtn.addEventListener('click', () => {
 
 settingsCancelBtn.addEventListener('click', () => {
   localStorage.clear();
-  for (let i = 0; i < checkBoxes.length; i++) {
-    checkBoxes[i].checked = false;
+  for (let i = 0; i < switchCheckboxes.length; i++) {
+    switchCheckboxes[i].checked = false;
   }
   settingsTimezone.selectedIndex = 0;
   settingsAlertMessage.innerHTML = `settings cleared!`;

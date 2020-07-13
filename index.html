@@ -279,13 +279,13 @@
         <div class="settings widget">
           <h4 class="widget--title">Settings</h4>
           <div class="widget--settings-container">
-            <div class="small-notification">
-              <h5 class="small-notification-header" id="testMessage">settings saved!</h5>
+            <div class="settings--alert">
+              <h5 class="settings--alert-text" id="settingsAlertText">settings saved!</h5>
             </div>
-            <div class="widget--settings-toggle-box">
+            <div class="settings--switch-container">
               <label class="switch-light switch-material" onclick="">
-                <input type="checkbox" name="checkbox1" value="email" class="widget-checkbox" id="widget-checkbox1">
-                <p class="widget--settings-toggle-box-title">Send Email Notifications</p>
+                <input type="checkbox" name="checkbox1" value="email" class="settings--switch-container-checkbox" id="widget-checkbox1">
+                <p class="settings--switch-container-title">Send Email Notifications</p>
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -293,10 +293,10 @@
                 </span>
               </label>
             </div>
-            <div class="widget--settings-toggle-box">
+            <div class="settings--switch-container">
               <label class="switch-light switch-material" onclick="">
-                <input type="checkbox" name="checkbox2" value="profile" class="widget-checkbox" id="widget-checkbox2">
-                <p class="widget--settings-toggle-box-title">Set Profile to Public</p>
+                <input type="checkbox" name="checkbox2" value="profile" class="settings--switch-container-checkbox" id="widget-checkbox2">
+                <p class="settings--switch-container-title">Set Profile to Public</p>
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -304,8 +304,8 @@
                 </span>
               </label>
             </div>
-            <select class="widget--settings-dropdown" id="timezone">
-              <option class="dropdown-title" value="" selected disabled>Select a Timezone</option>
+            <select class="settings--dropdown" id="timezone">
+              <option class="settings--dropdown-title" value="" selected disabled>Select a Timezone</option>
               <option value="hawaii">Hawaii</option>
               <option value="alaska">Alaska</option>
               <option value="pacific">Pacific</option>
@@ -313,9 +313,9 @@
               <option value="central">Central</option>
               <option value="eastern">Eastern</option>
             </select>
-            <div class="widget--settings-button-box">
-              <button class="widget--settings-buttons primary" id="save">Save</button>
-              <button class="widget--settings-buttons disabled" id="cancel">Cancel</button>
+            <div class="settings--btn-container">
+              <button class="settings--btn-container-btns" id="settingsSaveBtn">Save</button>
+              <button class="settings--btn-container-btns" id="settingsCancelBtn">Cancel</button>
             </div>
           </div>
         </div>

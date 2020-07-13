@@ -771,7 +771,7 @@ a {
   position: relative;
 }
 
-.small-notification {
+.settings--alert {
   position: absolute;
   top: -41px;
   left: 80px;
@@ -785,7 +785,7 @@ a {
   transition: width 0.3s ease;
 }
 
-.small-notification-header {
+.settings--alert-text {
   text-align: center;
   font-weight: normal;
   white-space: nowrap;
@@ -806,12 +806,12 @@ a {
   background: #7476bf;
 }
 
-.widget--settings-toggle-box-title {
+.settings--switch-container-title {
   margin: 0;
   flex-basis: 70%;
 }
 
-.widget--settings-dropdown {
+.settings--dropdown {
   padding: 0.8em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
@@ -823,13 +823,13 @@ a {
   margin: 15px 0;
 }
 
-.widget--settings-button-box {
+.settings--btn-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.widget--settings-buttons {
+.settings--btn-container-btns {
   font-weight: 600;
   text-transform: uppercase;
   padding: 0.8em 0;
@@ -841,10 +841,10 @@ a {
   transition: all 0.3s ease-in-out;
   outline: 0;
 }
-.widget--settings-buttons:hover {
+.settings--btn-container-btns:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.widget--settings-buttons:active {
+.settings--btn-container-btns:active {
   background-color: #9798cf;
   border-color: #9798cf;
 }

@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.small-notification {
+.settings--alert {
   position: absolute;
   top: -41px;
   left: 80px;
@@ -21,7 +21,7 @@
   transition: width 0.3s ease;
 }
 
-.small-notification-header {
+.settings--alert-text {
   text-align: center;
   font-weight: normal;
   white-space: nowrap;
@@ -41,12 +41,12 @@
   background: #7476bf;
 }
 
-.widget--settings-toggle-box-title {
+.settings--switch-container-title {
   margin: 0;
   flex-basis: 70%;
 }
 
-.widget--settings-dropdown {
+.settings--dropdown {
   padding: .8em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
@@ -58,11 +58,11 @@
   margin: 15px 0;
 }
 
-.widget--settings-button-box {
+.settings--btn-container {
   @include flexy($dir: row, $just: space-between);
 }
 
-.widget--settings-buttons {
+.settings--btn-container-btns {
   font-weight: 600;
   text-transform: uppercase;
   padding: .8em 0;
