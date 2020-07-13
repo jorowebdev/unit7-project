@@ -412,7 +412,6 @@ a {
 
 .footer {
   grid-area: footer;
-  border: solid 2px blue;
 }
 @media (min-width: 768px) {
   .footer {
@@ -670,7 +669,23 @@ a {
 }
 
 .footer {
+  padding-left: 10px;
+  padding-right: 10px;
   transition: 0.5s;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.footer--text {
+  font-weight: lighter;
+  font-size: 0.7em;
+  text-align: right;
+  color: #dbdbdb;
+  margin: 20px 0;
 }
 
 /* ============================================= */

@@ -72,7 +72,6 @@ img {
 .footer {
   // Grid position
   grid-area: footer;
-  border: solid 2px blue;
   @include mq($break-m) {
     margin-left: 0 !important;
   }
@@ -315,5 +314,19 @@ img {
 // Footer Styles
 
 .footer {
+  padding-left: 10px;
+  padding-right: 10px;
   transition: .5s;
+  @include mq($break-m) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.footer--text {
+  font-weight: lighter;
+  font-size: .7em;
+  text-align: right;
+  color: #dbdbdb;
+  margin: 20px 0;
 }
