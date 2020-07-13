@@ -952,7 +952,7 @@ a {
   position: relative;
 }
 
-.message-alert {
+.message--alert {
   position: absolute;
   top: -41px;
   left: 125px;
@@ -966,26 +966,21 @@ a {
   transition: width 0.3s ease;
 }
 
-.message-small-alert-header {
+.message--alert-text {
   text-align: center;
   font-weight: normal;
   white-space: nowrap;
   margin: 5px 0;
 }
 
-.flex-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.widget--container-message-input {
+.message--input {
   padding: 0.8em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
 }
 
-.widget--container-message-textarea {
+.message--textarea {
   padding: 0.8em;
   background-color: #fbfbfb;
   border: 1px solid #dbdbdb;
@@ -993,17 +988,17 @@ a {
   resize: none;
 }
 
-.widget--container-message-input::placeholder {
+.message--input::placeholder {
   color: #dbdbdb;
   font-weight: lighter;
 }
 
-.widget--container-message-textarea::placeholder {
+.message--textarea::placeholder {
   color: #dbdbdb;
   font-weight: lighter;
 }
 
-.widget--container-message-button {
+.message--btn {
   font-weight: 600;
   text-transform: uppercase;
   padding: 0.8em 0;
@@ -1014,10 +1009,10 @@ a {
   outline: 0;
   transition: all 0.3s ease-in-out;
 }
-.widget--container-message-button:hover {
+.message--btn:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.widget--container-message-button:active {
+.message--btn:active {
   background-color: #9798cf;
   border-color: #9798cf;
 }

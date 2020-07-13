@@ -13,11 +13,11 @@ const trafficCanvas = document.querySelector('#traffic--chart');
 const dailyCanvas = document.querySelector('#daily-chart');
 const mobileCanvas = document.querySelector('#mobile-chart');
 const autcompleteInput = document.querySelector('#userField');
-const messageAlert = document.querySelector('.message-alert');
+const messageAlert = document.querySelector('.message--alert');
 const messageAlertText = document.querySelector('#messageAlert');
 const messageUserInput = document.querySelector('#userField');
 const messageUserTextArea = document.querySelector('#messageField');
-const messageBtn = document.querySelector('#message-send');
+const messageBtn = document.querySelector('#messageSend');
 const settingsAlert = document.querySelector('.small-notification');
 const settingsAlertMessage = document.querySelector('#testMessage');
 const checkBoxes = document.querySelectorAll('.widget-checkbox');
@@ -337,6 +337,7 @@ messageBtn.addEventListener('click', () => {
   setTimeout(() => {
     messageAlert.style.width = '0px';
     messageAlert.style.opacity = '1';
+    messageAlertText.innerHTML = ``;
   }, 2000);
   false;
 })
@@ -352,6 +353,7 @@ settingsSaveBtn.addEventListener('click', () => {
   setTimeout(() => {
     settingsAlert.style.width = '0px';
     settingsAlert.style.opacity = '1';
+    settingsAlertMessage.innerHTML = ``;
   }, 2000);
 })
 
@@ -367,5 +369,6 @@ settingsCancelBtn.addEventListener('click', () => {
   setTimeout(() => {
     settingsAlert.style.width = '0px';
     settingsAlert.style.opacity = '1';
+    settingsAlertMessage.innerHTML = ``;
   }, 2000);
 })
