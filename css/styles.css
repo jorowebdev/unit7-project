@@ -640,30 +640,30 @@ a {
   text-align: center;
 }
 
-.nav--ul-buttons {
+.nav--ul-btns {
   padding: 5px;
   cursor: pointer;
 }
 
-.nav--ul-buttons:nth-child(1n+2) {
+.nav--ul-btns:nth-child(1n+2) {
   margin-top: 5px;
 }
 
-.nav--link:visited > svg > path {
+.nav--ul-btns-links:visited > svg > path {
   fill: #dbdbdb;
   stroke: transparent;
 }
 
-.nav--link:active > svg > path {
+.nav--ul-btns-links:active > svg > path {
   fill: white;
   stroke: white;
 }
 
-.nav--svg-icon {
+.nav--ul-btns-svgs {
   width: 24px;
   height: 24px;
 }
-.nav--svg-icon-path {
+.nav--ul-btns-svgs-paths {
   fill: #fbfbfb;
 }
 
