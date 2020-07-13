@@ -1,10 +1,6 @@
 /* ============================================= */
-/*              Notification Imports             */
+/*              Alerts Imports             */
 /* ============================================= */
-
-.alerts {
-
-}
 
 .alerts--container {
   @include flexy($dir: column, $just: center);
