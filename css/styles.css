@@ -426,17 +426,17 @@ a {
   color: white;
 }
 
-.header--menu-button {
+.header--menu-btn {
   margin-left: 10px;
   cursor: default;
 }
 @media (min-width: 768px) {
-  .header--menu-button {
+  .header--menu-btn {
     visibility: hidden;
   }
 }
 
-.header--menu-button:hover {
+.header--menu-btn:hover {
   cursor: pointer;
 }
 
@@ -455,26 +455,26 @@ a {
   }
 }
 
-.section-two {
+.header--title-two {
   font-weight: lighter;
 }
 
-.header--notification-container {
+.header--notification {
   position: relative;
 }
 
-.header--notification-button {
+.header--notification-btn {
   width: 18px;
   height: 18px;
   margin-top: 5px;
   margin-right: 10px;
 }
 
-.header--notification-button:hover {
+.header--notification-btn:hover {
   cursor: pointer;
 }
 
-.header--notification-button-path {
+.header--notification-btn-path {
   fill: white;
   stroke: white;
   stroke-width: 0.5;
@@ -545,7 +545,7 @@ a {
   border-radius: 5px;
 }
 
-.header--notification-item-bullet {
+.header--notification-dropdown-card-bullet {
   width: 5px;
   height: 5px;
   background-color: #81c98f;
@@ -553,17 +553,17 @@ a {
   margin: 0 5px;
 }
 
-.header--notification-item-text {
+.header--notification-dropdown-card-text {
   font-size: 0.7em;
   flex-grow: 1;
   text-align: left;
 }
 
-.header--notification-item-close-btn {
+.header--notification-dropdown-card-btn {
   font-size: 12px;
   margin-right: 5px;
 }
-.header--notification-item-close-btn:hover {
+.header--notification-dropdown-card-btn:hover {
   cursor: pointer;
 }
 
@@ -580,34 +580,34 @@ a {
   }
 }
 
-.header--members-profile {
+.header--profile {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-right: 10px;
 }
 @media (min-width: 768px) {
-  .header--members-profile {
+  .header--profile {
     margin-right: 20px;
   }
 }
 
-.header--members-profile-name {
+.header--profile-name {
   display: none;
 }
 @media (min-width: 768px) {
-  .header--members-profile-name {
+  .header--profile-name {
     display: block;
   }
 }
 
-.header--members-profile-photo {
+.header--profile-photo {
   width: 24px;
   height: 24px;
   border-radius: 50%;
 }
 @media (min-width: 768px) {
-  .header--members-profile-photo {
+  .header--profile-photo {
     margin-right: 10px;
   }
 }
@@ -663,7 +663,7 @@ a {
   width: 24px;
   height: 24px;
 }
-.nav--ul-btns-svgs-paths {
+.nav--ul-btns-svgs-path {
   fill: #fbfbfb;
 }
 
