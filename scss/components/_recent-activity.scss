@@ -6,27 +6,34 @@
   @include flexy($dir: column);
 }
 
-.widget--container-activity-card {
+.activity--card {
   @include flexy($dir: row);
   align-items: center;
   font-size: .9em;
 }
-.widget--container-activity-card:nth-child(1n+2) {
+.activity--card:nth-child(1n+2) {
   border-top: 1px solid #dbdbdb;
 }
 
-.widget--container-activity-info {
+.activity--card-img {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  margin: 10px 10px 10px 0;
+}
+
+.activity--card-text {
   flex-grow: 1;
 }
 
-.widget--container-activity-description {
+.activity--card-text-desc {
   margin: 0;
 }
 
-.widget--container-activity-time-elapsed {
+.activity--card-text-desc {
   margin: 0;
 }
 
-.widget--container-activity-link {
+.activity--card-link {
   font-size: 1.5em;
 }

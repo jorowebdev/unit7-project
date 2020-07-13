@@ -226,7 +226,7 @@ a {
   }
 }
 
-.header--member-profile {
+.header--members-profile {
   @include flexy($dir: row);
   align-items: center;
   margin-right: 10px;
@@ -235,14 +235,14 @@ a {
   }
 }
 
-.header--member-profile-name {
+.header--members-profile-name {
   display: none;
   @include mq($break-m) {
     display: block;
   }
 }
 
-.header--member-profile-photo {
+.header--members-profile-photo {
   width: 24px;
   height: 24px;
   border-radius: 50%;
