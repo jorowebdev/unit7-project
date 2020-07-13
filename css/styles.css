@@ -907,38 +907,38 @@ a {
   flex-direction: column;
 }
 
-.member--card {
+.members--card {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 0.9em;
 }
 
-.member--card:nth-child(1n+2) {
+.members--card:nth-child(1n+2) {
   border-top: 1px solid #dbdbdb;
 }
 
-.member--card-img {
+.members--card-img {
   width: 51px;
   height: 51px;
   border-radius: 50%;
   margin: 10px 10px 10px 0;
 }
 
-.member--card-text {
+.members--card-text {
   flex-grow: 1;
 }
 
-.member--card-text-name {
+.members--card-text-name {
   margin: 0;
 }
 
-.member--card-text-email {
+.members--card-text-email {
   font-weight: lighter;
   font-size: 0.7em;
 }
 
-.member--card-date {
+.members--card-date {
   font-weight: lighter;
   text-align: right;
 }
