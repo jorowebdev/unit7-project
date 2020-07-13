@@ -718,7 +718,7 @@ a {
   .dashboard--search-row,
 .alerts,
 .traffic,
-.social-stats {
+.social {
     grid-column: 1/span 2;
   }
 
@@ -907,38 +907,38 @@ a {
   flex-direction: column;
 }
 
-.widget--container-member-card {
+.member--card {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 0.9em;
 }
 
-.widget--container-member-card:nth-child(1n+2) {
+.member--card:nth-child(1n+2) {
   border-top: 1px solid #dbdbdb;
 }
 
-.widget--container-member-img {
+.member--card-img {
   width: 51px;
   height: 51px;
   border-radius: 50%;
   margin: 10px 10px 10px 0;
 }
 
-.widget--container-member-card-contact {
+.member--card-text {
   flex-grow: 1;
 }
 
-.widget--container-member-card-name {
+.member--card-text-name {
   margin: 0;
 }
 
-.widget--container-member-card-email {
+.member--card-text-email {
   font-weight: lighter;
   font-size: 0.7em;
 }
 
-.widget--container-member-card-date {
+.member--card-date {
   font-weight: lighter;
   text-align: right;
 }
