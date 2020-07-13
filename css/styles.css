@@ -1114,6 +1114,11 @@ select {
   margin: 0;
 }
 
+.activity--card-link {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 /* ============================================= */
 /*              Social Stats Imports             */
 /* ============================================= */
