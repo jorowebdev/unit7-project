@@ -708,11 +708,16 @@ a {
 .dashboard--title-container {
   height: 100%;
   background: white;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .dashboard--title-container {
+    padding: 0 20px 0 10px;
+  }
 }
 
 .dashboard--title {
   font-weight: normal;
-  margin-right: 20px;
 }
 
 @media (min-width: 768px) {
@@ -874,7 +879,7 @@ a {
 /* ============================================= */
 /*              Searchbar Imports                */
 /* ============================================= */
-.search {
+.searchbar {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -884,41 +889,39 @@ a {
   border-bottom: 1px solid #dbdbdb;
 }
 
-.search--input-container {
+.searchbar--container {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-basis: 80%;
   min-width: 0;
   max-width: 300px;
-  margin: 10px 0;
+  margin: 10px 10px 10px;
+}
+@media (min-width: 768px) {
+  .searchbar--container {
+    margin-right: 20px;
+  }
 }
 
-.search--input {
+.searchbar--container-input {
   flex-basis: 100%;
   min-width: 0;
-  padding: 5px 25px 5px 25px;
+  padding: 5px 25px 5px 10px;
+  border-radius: 5px;
+  border: solid 1px #dbdbdb;
 }
 
-.search--search-icon-container {
+.searchbar--container-input::placeholder {
+  color: #dbdbdb;
+}
+
+.searchbar--container-icon {
   position: absolute;
-}
-
-.search--search-icon {
-  position: relative;
   font-size: 15px;
-  top: 12px;
-  left: 10px;
-}
-
-.search--cancel-icon-container {
-  position: absolute;
-}
-
-.search--cancel-icon {
-  position: relative;
-  font-size: 15px;
-  top: 12px;
-  left: -25px;
+  color: #dbdbdb;
+  top: 10px;
+  right: 10px;
 }
 
 /* ============================================= */
