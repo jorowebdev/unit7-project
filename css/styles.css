@@ -459,6 +459,10 @@ a {
   font-weight: lighter;
 }
 
+.header--title-superscript {
+  font-weight: lighter;
+}
+
 .header--notification {
   position: relative;
 }
@@ -678,6 +682,10 @@ a {
 
 p {
   font-size: 0.8em;
+}
+
+sup {
+  font-size: 0.6em;
 }
 
 email {
@@ -928,6 +936,7 @@ select {
 }
 
 .searchbar--container-icon {
+  font-size: 20px;
   position: absolute;
   color: #dbdbdb;
   top: 10px;

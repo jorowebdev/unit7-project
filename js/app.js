@@ -40,7 +40,7 @@ window.onload = () => {
   alertsContainer.innerHTML = `
     <div class="alerts--card">
       <h5 class="alerts--card-title">Alert!</h5>
-      <p class="alerts--card-text">This is an alert.</p>
+      <p class="alerts--card-text">Tropical Storm approaching Isla Nublar in approx 4 hours.</p>
       <i class="alerts--card-close-btn material-icons-round">close</i>
     </div>
   `;
