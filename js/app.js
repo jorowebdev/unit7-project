@@ -32,7 +32,7 @@ const supportsLocalStorage = () => {
   } catch(e) {
     return false;
   }
-}
+};
 
 window.onload = () => {
   const alertsContainer = document.createElement("DIV");
@@ -82,7 +82,7 @@ notificationButton.addEventListener('click', () => {
   } else {
     notificationDropdown.style.display = 'none';
   }
-})
+});
 
 notificationDropdown.addEventListener('click', (e) => {
   if (e.target.nodeName == "SPAN") {
@@ -94,7 +94,7 @@ notificationDropdown.addEventListener('click', (e) => {
       parentOfCloseBtn.parentElement.removeChild(parentOfCloseBtn);
     }
   }
-})
+});
 
 alertsWidget.addEventListener('click', (e) => {
   if (e.target.nodeName == "I") {
@@ -103,7 +103,7 @@ alertsWidget.addEventListener('click', (e) => {
     alertsWidget.removeChild(alertsWidget.firstElementChild);
     alertsWidget.style.margin = 0;
   }
-})
+});
 
 const trafficDataHourly = {
   labels: ['7 PM', '8 PM', '9 PM', '10 PM', '11 PM', '12 AM'],
@@ -117,7 +117,7 @@ const trafficDataHourly = {
     pointBackgroundColor: 'white',
     pointBorderWidth: 2
   }]
-}
+};
 
 const trafficDataDaily = {
   labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -131,7 +131,7 @@ const trafficDataDaily = {
     pointBackgroundColor: 'white',
     pointBorderWidth: 2
   }]
-}
+};
 
 const trafficDataMonthly = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -145,7 +145,7 @@ const trafficDataMonthly = {
     pointBackgroundColor: 'white',
     pointBorderWidth: 2
   }]
-}
+};
 
 trafficChartNav.addEventListener('click', (e) => {
   e.target.style.backgroundColor = '#80C98F';
@@ -167,7 +167,7 @@ trafficChartNav.addEventListener('click', (e) => {
     trafficChart.data = trafficData;
   }
   trafficChart.update();
-})
+});
 
 let trafficData = {
   labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -181,7 +181,7 @@ let trafficData = {
     pointBackgroundColor: 'white',
     pointBorderWidth: 2
   }]
-}
+};
 
 const trafficOptions = {
   aspectRatio: 2.5,
@@ -211,13 +211,13 @@ const trafficOptions = {
   legend: {
     display: false
   }
-}
+};
 
 let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
-})
+});
 
 
 const dailyData = {
@@ -255,7 +255,7 @@ const dailyOptions = {
   legend: {
     display: false
   }
-}
+};
 
 let dailyChart = new Chart(dailyCanvas, {
   type: 'bar',
@@ -286,15 +286,13 @@ const mobileOptions = {
       fontstyle: 'bold'
     }
   }
-}
+};
 
 const mobileChart = new Chart(mobileCanvas, {
   type: 'doughnut',
   data: mobileData,
   options: mobileOptions
 });
-
-
 
 $(function(){
   const data = [
@@ -314,8 +312,6 @@ $(function(){
     source:data
   });
 });
-
-$('testMessage').slideDown;
 
 messageBtn.addEventListener('click', () => {
   if (messageUserInput.value.length == 0 && messageUserTextArea.value.length == 0) {
@@ -341,7 +337,7 @@ messageBtn.addEventListener('click', () => {
     messageAlertText.innerHTML = ``;
   }, 2000);
   false;
-})
+});
 
 settingsSaveBtn.addEventListener('click', () => {
   for (let i = 0; i < switchCheckboxes.length; i++) {
@@ -356,7 +352,7 @@ settingsSaveBtn.addEventListener('click', () => {
     settingsAlert.style.opacity = '1';
     settingsAlertMessage.innerHTML = ``;
   }, 2000);
-})
+});
 
 settingsCancelBtn.addEventListener('click', () => {
   localStorage.clear();
@@ -372,4 +368,4 @@ settingsCancelBtn.addEventListener('click', () => {
     settingsAlert.style.opacity = '1';
     settingsAlertMessage.innerHTML = ``;
   }, 2000);
-})
+});
